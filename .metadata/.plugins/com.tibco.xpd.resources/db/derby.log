@@ -1,0 +1,26 @@
+----------------------------------------------------------------
+2018-11-21 10:52:44.265 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance a816c00e-0167-35e6-98d2-00007f4dd899
+on database directory memory:C:\Users\admin\BW6_workspace\.metadata\.plugins\com.tibco.xpd.resources\db\TibcoResources  
+
+Database Class Loader started - derby.database.classpath=''
+2018-11-21 10:53:43.534 GMT Thread[Worker-5,5,main] (XID = 1401), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Cleanup action starting
+2018-11-21 10:53:43.534 GMT Thread[Worker-5,5,main] (XID = 1401), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Failed Statement is: INSERT INTO global_references_index(internal_name,internal_type,internal_uri,internal_path,internal_project,internal_updatetimestamp,sourceURI,targetIdentifier,sourceFilePath,targetFilePath,info,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?) with 12 parameters begin parameter #1: NULL :end parameter begin parameter #2: NULL :end parameter begin parameter #3: platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/saveDataCase.bwp#TIMESTAMP :end parameter begin parameter #4: /com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/saveDataCase.bwp :end parameter begin parameter #5: com.tibco.poc.test.bpm.soapCall.module :end parameter begin parameter #6: 1542797623192 :end parameter begin parameter #7: NULL :end parameter begin parameter #8: NULL :end parameter begin parameter #9: NULL :end parameter begin parameter #10: NULL :end parameter begin parameter #11: NULL :end parameter begin parameter #12: NULL :end parameter 
+ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL181121115246300' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Cleanup action completed

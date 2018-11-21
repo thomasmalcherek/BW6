@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:ns="http://www.tibco.com/BPMreceiveRequestFromBW/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BPMreceiveRequestFromBW" targetNamespace="http://www.tibco.com/BPMreceiveRequestFromBW/">
+  <wsdl:import namespace="http://www.tibco.com/BPMreceiveRequestFromBW/"/>
+  <wsdl:binding name="BPMreceiveRequestFromBWSOAP" type="ns:BPMreceiveRequestFromBW">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SendRequestToBPM">
+      <soap:operation soapAction="http://www.tibco.com/BPMreceiveRequestFromBW//BPMreceiveRequestFromBW/SendRequestToBPM"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BPMreceiveRequestFromBW">
+    <wsdl:port binding="ns:BPMreceiveRequestFromBWSOAP" name="BPMreceiveRequestFromBW">
+      <soap:address location="http://www.tibco.com/BPMreceiveRequestFromBW/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

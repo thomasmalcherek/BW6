@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename Operation from &apos;operation&apos; to &apos;SimpleAddressLookup-Operation&apos;" description="Rename Operation from &apos;operation&apos; to &apos;SimpleAddressLookup-Operation&apos;" flags="7" id="com.tibco.bw.core.design.refactoring.rename.operation" stamp="1542209323174"/>&#x0A;<refactoring comment="Delete Module Configuration Property &apos;Property&apos;" description="Delete Module Configuration Property &apos;Property&apos;" flags="7" id="com.tibco.bw.core.design.refactoring.delete.moduleproperty" stamp="1542209574838"/>
+</session>

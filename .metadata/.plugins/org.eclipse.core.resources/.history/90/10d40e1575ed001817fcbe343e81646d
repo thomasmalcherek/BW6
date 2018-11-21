@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:BWreceiveRequestFromBPM="http://www.tibco.com/BWreceiveRequestFromBPM/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:com.tibco.poc.test.bw.saveDataCase="http://com.tibco.poc.test.bw.saveDataCase" xmlns:com.tibco.poc.test.bw.saveDataCaseXSD="http://com.tibco.poc.test.bw.saveDataCaseXSD" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_dA9V4OmzEeiG6re6qGmOwQ" targetNamespace="http://tns.tibco.com/bw/composite/com.tibco.poc.test.bpm.soapCall.module" name="com.tibco.poc.test.bpm.soapCall.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_t2KB0O1rEeiaAOxvjoaGTw" name="saveDataCase" promote="ComponentsaveDataCase/saveDataCase">
+    <sca:interface.wsdl xmi:id="_t2L3AO1rEeiaAOxvjoaGTw" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_vZJekO1rEeiaAOxvjoaGTw" name="SOAPServiceBinding" targetNamespace="http://com.tibco.poc.test.bw.saveDataCaseSoap" soapVersion="1.2" portTypeQName="com.tibco.poc.test.bw.saveDataCase:saveDataCase" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+      <bindingType xmi:id="_vZJeke1rEeiaAOxvjoaGTw"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_K89xMO1yEeiaAOxvjoaGTw" jmsResource="com.tibco.poc.test.bpm.soapcall.module.JMSConnectionResource" messageType="Text"/>
+      <operationConfiguration xmi:id="_vZJeku1rEeiaAOxvjoaGTw" description="" operationName="CreateCaseID" action="CreateCaseID" actionNeeded="true">
+        <bindingType xmi:id="_vZJek-1rEeiaAOxvjoaGTw" style="DOCUMENT"/>
+        <messageConfiguration xmi:id="_vZJelO1rEeiaAOxvjoaGTw" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vZJele1rEeiaAOxvjoaGTw" partName="InputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_vZJelu1rEeiaAOxvjoaGTw" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vZJel-1rEeiaAOxvjoaGTw" partName="OutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_vZKFoO1rEeiaAOxvjoaGTw">
+          <inputMapping xmi:id="_vZKFoe1rEeiaAOxvjoaGTw"/>
+          <outputMapping xmi:id="_vZKFou1rEeiaAOxvjoaGTw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_vZJemO1rEeiaAOxvjoaGTw" description="" operationName="CreateCaseIDFromBPM" action="CreateCaseIDFromBPM" actionNeeded="true">
+        <bindingType xmi:id="_vZJeme1rEeiaAOxvjoaGTw" style="DOCUMENT"/>
+        <messageConfiguration xmi:id="_vZJemu1rEeiaAOxvjoaGTw" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequestFromBPM" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vZJem-1rEeiaAOxvjoaGTw" partName="InputParametersFromBPM" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDRequestFromBPM"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_vZJenO1rEeiaAOxvjoaGTw" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDResponseFromBPM" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vZJene1rEeiaAOxvjoaGTw" partName="OutputParametersFromBPM" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDResponseFromBPM"/>
+        </messageConfiguration>
+        <context xmi:id="_vZKFo-1rEeiaAOxvjoaGTw">
+          <inputMapping xmi:id="_vZKFpO1rEeiaAOxvjoaGTw"/>
+          <outputMapping xmi:id="_vZKFpe1rEeiaAOxvjoaGTw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_vZKFpu1rEeiaAOxvjoaGTw" bindingName="SOAPServiceBinding">
+      <sca:property xmi:id="_MS0w4O1yEeiaAOxvjoaGTw" name="destination" scaext:simpleValue="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata"/>
+    </scact:bindingAdjunct>
+  </sca:service>
+  <sca:property xmi:id="_dcieoOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dcqacOmzEeiG6re6qGmOwQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcemzEeiG6re6qGmOwQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcumzEeiG6re6qGmOwQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cemzEeiG6re6qGmOwQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cumzEeiG6re6qGmOwQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ddHGYOmzEeiG6re6qGmOwQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2tqdQOm2EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/NamingProviderUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_J9l10Om3EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ol1Z8Oy2EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/User" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_u902wOy2EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/Password" type="property:password" scaext:simpleValue="#!Je6Xs35U3MTX7FDoQcHV9w==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YHVKsOy3EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/DB_URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_t2CGAO1rEeiaAOxvjoaGTw" name="ComponentsaveDataCase" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_t2CGAe1rEeiaAOxvjoaGTw" processName="com.tibco.poc.test.bpm.soapcall.module.saveDataCase"/>
+    <sca:service xmi:id="_t2IzsO1rEeiaAOxvjoaGTw" name="saveDataCase">
+      <sca:interface.wsdl xmi:id="_t2JawO1rEeiaAOxvjoaGTw" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

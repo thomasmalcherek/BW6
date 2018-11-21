@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:BWreceiveRequestFromBPM="http://www.tibco.com/BWreceiveRequestFromBPM/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_dA9V4OmzEeiG6re6qGmOwQ" targetNamespace="http://tns.tibco.com/bw/composite/com.tibco.poc.test.bpm.soapCall.module" name="com.tibco.poc.test.bpm.soapCall.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Nk2iUum1EeiG6re6qGmOwQ" name="BWreceiveRequestFromBPMPortType" promote="ComponentBWreceiveRequestFromBPMPortType/BWreceiveRequestFromBPMPortType">
+    <sca:interface.wsdl xmi:id="_Nk2iVum1EeiG6re6qGmOwQ" interface="http://www.tibco.com/BWreceiveRequestFromBPM/#wsdl.interface(BWreceiveRequestFromBPMPortType)" scaext:wsdlLocation="../Service%20Descriptors/BWreceiveRequestFromBPM.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_NlATUOm1EeiG6re6qGmOwQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com.poc.bpm.soapcall" soapVersion="1.2" portTypeQName="BWreceiveRequestFromBPM:BWreceiveRequestFromBPMPortType" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/BWreceiveRequestFromBPM.wsdl">
+      <bindingType xmi:id="_NlKEUOm1EeiG6re6qGmOwQ"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_hmhg4Om1EeiG6re6qGmOwQ" jmsResource="com.tibco.poc.test.bpm.soapcall.module.JMSConnectionResource" messageType="Text"/>
+      <operationConfiguration xmi:id="_NlTOQOm1EeiG6re6qGmOwQ" operationName="SendRequestToBW" action="SendRequestToBW" actionNeeded="true">
+        <bindingType xmi:id="_NlTOQem1EeiG6re6qGmOwQ"/>
+        <messageConfiguration xmi:id="_NlTOQum1EeiG6re6qGmOwQ" messageQName="BWreceiveRequestFromBPM:Request" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/BWreceiveRequestFromBPM.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_NlTOQ-m1EeiG6re6qGmOwQ" partName="InputParameters" partElementName="BWreceiveRequestFromBPM:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_NlTOROm1EeiG6re6qGmOwQ" messageQName="BWreceiveRequestFromBPM:Response" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/BWreceiveRequestFromBPM.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_NlTORem1EeiG6re6qGmOwQ" partName="OutputParameters" partElementName="BWreceiveRequestFromBPM:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_NlTORum1EeiG6re6qGmOwQ">
+          <inputMapping xmi:id="_NlTOR-m1EeiG6re6qGmOwQ"/>
+          <outputMapping xmi:id="_NlTOSOm1EeiG6re6qGmOwQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_NlTOSem1EeiG6re6qGmOwQ" bindingName="SOAPServiceBinding">
+      <sca:property xmi:id="_R4B80Om3EeiG6re6qGmOwQ" name="destination" scaext:simpleValue="/JMS_BPM_BW6/com.tibco.poc.test.bpm.soapCall"/>
+    </scact:bindingAdjunct>
+  </sca:service>
+  <sca:property xmi:id="_dcieoOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dcqacOmzEeiG6re6qGmOwQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcemzEeiG6re6qGmOwQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcumzEeiG6re6qGmOwQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cemzEeiG6re6qGmOwQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cumzEeiG6re6qGmOwQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ddHGYOmzEeiG6re6qGmOwQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2tqdQOm2EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/NamingProviderUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_J9l10Om3EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/com.tibco.poc.test.bpm.soapCall" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_NksxUOm1EeiG6re6qGmOwQ" name="ComponentBWreceiveRequestFromBPMPortType" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NksxUem1EeiG6re6qGmOwQ" processName="com.tibco.poc.test.bpm.soapcall.module.BWreceiveRequestFromBPMPortType"/>
+    <sca:service xmi:id="_Nk2iUOm1EeiG6re6qGmOwQ" name="BWreceiveRequestFromBPMPortType">
+      <sca:interface.wsdl xmi:id="_Nk2iUem1EeiG6re6qGmOwQ" interface="http://www.tibco.com/BWreceiveRequestFromBPM/#wsdl.interface(BWreceiveRequestFromBPMPortType)" scaext:wsdlLocation="../Service%20Descriptors/BWreceiveRequestFromBPM.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

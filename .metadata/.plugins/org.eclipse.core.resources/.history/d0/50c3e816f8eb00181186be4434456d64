@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.tibco.com/BPMreceiveRequestFromBW/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BPMreceiveRequestFromBW"
+	targetNamespace="http://www.tibco.com/BPMreceiveRequestFromBW/">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.tibco.com/BPMreceiveRequestFromBW/">
+			<xsd:element name="Input">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:sequence>
+							<xsd:element name="AHV-Nummer" type="xsd:string" />
+							<xsd:element name="Partner-ID" type="xsd:string" />
+							<xsd:element name="Dokumenten-Art" type="xsd:string" />
+							<xsd:element name="Kanton" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Output">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ReceiveCommit" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Fault" type="xsd:string" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="Request">
+		<wsdl:part element="tns:Input" name="InputParameters" />
+	</wsdl:message>
+	<wsdl:message name="Response">
+		<wsdl:part element="tns:Output" name="OutputParameters" />
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<part element="tns:Fault" name="error" />
+	</wsdl:message>
+	<wsdl:portType name="BPMreceiveRequestFromBW">
+		<wsdl:operation name="SendRequestToBPM">
+			<wsdl:input message="tns:Request" />
+			<wsdl:output message="tns:Response" />
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

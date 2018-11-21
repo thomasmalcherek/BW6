@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:simpleaddresslookup="http://www.tibco.com/bwse/simpleaddresslookup" xmi:id="_EehfcMWkEei2G7_YNCO7lw" targetNamespace="http://tns.tibco.com/bw/composite/tibco.bw.bpm.soapCall.module" name="tibco.bw.bpm.soapCall.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="__85KgMWnEei2G7_YNCO7lw" name="SimpleAddressLookupPortType" promote="ComponentSimpleAddressLookupPortType/SimpleAddressLookupPortType">
+    <sca:interface.wsdl xmi:id="__85xkMWnEei2G7_YNCO7lw" interface="http://www.tibco.com/bwse/simpleaddresslookup#wsdl.interface(SimpleAddressLookupPortType)"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="__9BtYMWnEei2G7_YNCO7lw" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/bpmSvc" soapVersion="1.2" portTypeQName="simpleaddresslookup:SimpleAddressLookupPortType" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/BPM_CALL.module/Service%20Descriptors/bpm_callService.wsdl">
+      <bindingType xmi:id="__9LeYMWnEei2G7_YNCO7lw"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_3yE2cMWtEei2G7_YNCO7lw" jmsResource="bpm_call.module.JMSConnectionResource" destination="TEST_QUEUE" messageType="Text"/>
+      <operationConfiguration xmi:id="__9XroMWnEei2G7_YNCO7lw" operationName="SimpleAddressLookup-Operation" action="SimpleAddressLookup-Operation" actionNeeded="true">
+        <bindingType xmi:id="__9XrocWnEei2G7_YNCO7lw"/>
+        <messageConfiguration xmi:id="__9XrosWnEei2G7_YNCO7lw" messageQName="simpleaddresslookup:RequestMessage" wsdlLocation="platform:/resource/BPM_CALL.module/Service%20Descriptors/bpm_callService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="__9Xro8WnEei2G7_YNCO7lw" partName="requestMessage" partElementName="simpleaddresslookup:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="__9XrpMWnEei2G7_YNCO7lw" messageQName="simpleaddresslookup:ResponseMessage" messageDirection="OUTPUT" wsdlLocation="platform:/resource/BPM_CALL.module/Service%20Descriptors/bpm_callService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="__9XrpcWnEei2G7_YNCO7lw" partName="responseMessage" partElementName="simpleaddresslookup:Output"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="__9XrpsWnEei2G7_YNCO7lw" messageQName="simpleaddresslookup:FaultMessage" messageDirection="FAULT" action="fault1" wsdlLocation="platform:/resource/BPM_CALL.module/Service%20Descriptors/bpm_callService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="__9Xrp8WnEei2G7_YNCO7lw" partName="error" partElementName="simpleaddresslookup:Fault"/>
+        </messageConfiguration>
+        <context xmi:id="__9YSsMWnEei2G7_YNCO7lw">
+          <inputMapping xmi:id="__9Zg0MWnEei2G7_YNCO7lw"/>
+          <outputMapping xmi:id="__9Zg0cWnEei2G7_YNCO7lw" direction="OUTPUT"/>
+          <faultMappings xmi:id="__9Zg0sWnEei2G7_YNCO7lw" direction="FAULT" faultName="fault1"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="__9aH4MWnEei2G7_YNCO7lw" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_FH8P4MWkEei2G7_YNCO7lw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIJEMMWkEei2G7_YNCO7lw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIMukMWkEei2G7_YNCO7lw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIQY8MWkEei2G7_YNCO7lw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIUDUMWkEei2G7_YNCO7lw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIXGoMWkEei2G7_YNCO7lw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIaJ8MWkEei2G7_YNCO7lw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIdNQMWkEei2G7_YNCO7lw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIgQkMWkEei2G7_YNCO7lw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_j3_1YOgiEeisJLF5y65rCQ" name="/JMS_BPM_BW6/NamingProviderUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="__84jcMWnEei2G7_YNCO7lw" name="ComponentSimpleAddressLookupPortType" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__84jccWnEei2G7_YNCO7lw" processName="bpm_call.module.SimpleAddressLookupPortType"/>
+    <sca:service xmi:id="__84jcsWnEei2G7_YNCO7lw" name="SimpleAddressLookupPortType">
+      <sca:interface.wsdl xmi:id="__84jc8WnEei2G7_YNCO7lw" interface="http://www.tibco.com/bwse/simpleaddresslookup#wsdl.interface(SimpleAddressLookupPortType)" scaext:wsdlLocation="../Service%20Descriptors/bpm_callService.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCaseConcrete" xmlns:tns0="http://com.tibco.poc.test.bw.saveDataCaseXSD" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="saveDataCase" targetNamespace="http://com.tibco.poc.test.bw.saveDataCaseConcrete">
+  <wsdl:types>
+    <xsd:schema xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:ns0="http://com.tibco.poc.test.bw.saveDataCaseXSD" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://com.tibco.poc.test.bw.saveDataCaseXSD">
+      <xsd:element name="Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:element name="AHV-Nummer" type="xsd:string"/>
+              <xsd:element name="Partner-ID" type="xsd:string"/>
+              <xsd:element name="Dokumenten-Art" type="xsd:string"/>
+              <xsd:element name="Kanton" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="CaseID" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Fault" type="xsd:string"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateCaseIDRequest">
+    <wsdl:part element="tns0:Input" name="InputParameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateCaseIDResponse">
+    <wsdl:part element="tns0:Output" name="OutputParameters"/>
+  </wsdl:message>
+  <wsdl:portType name="saveDataCase">
+    <wsdl:operation name="CreateCaseID">
+      <wsdl:input message="tns:CreateCaseIDRequest"/>
+      <wsdl:output message="tns:CreateCaseIDResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:saveDataCase">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreateCaseID">
+      <soap12:operation soapAction="CreateCaseID" soapActionRequired="true" style="document"/>
+      <wsdl:input>
+        <soap12:body parts="InputParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body parts="OutputParameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="saveDataCase">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="saveDataCaseSOAP">
+      <soap12:address location="http://localhost:5555/SOAPServiceBinding/saveDataCase/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

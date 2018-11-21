@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="saveDataCaseSchema"
+	xmlns:tns="saveDataCaseSchema" elementFormDefault="qualified">
+
+	<element name="CreateCaseIDRequest">
+		<complexType>
+			<sequence>
+				<sequence>
+					<element name="AHV-Nummer" type="string" />
+					<element name="Partner-ID" type="string" />
+					<element name="Dokumenten-Art" type="string" />
+					<element name="Kanton" type="string" />
+				</sequence>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="CreateCaseIDResponse">
+		<complexType>
+			<sequence>
+				<element name="CaseID" type="string" minOccurs="1"
+					maxOccurs="1" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Fault" type="string" />
+</schema>
+
+
+<schema />
