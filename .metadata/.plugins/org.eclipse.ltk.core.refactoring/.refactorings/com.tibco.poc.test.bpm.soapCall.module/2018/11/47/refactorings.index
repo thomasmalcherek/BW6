@@ -9,3 +9,5 @@
 1542718954934	Rename resource 'SubProcessSaveDataCase.bwp'
 1542788928826	Rename resource 'saveData.xsd'
 1542790678074	Rename resource 'saveDataCase1.bwp'
+1542812696876	Create Operation in PortType 'saveDataCase'
+1542813698744	Rename resource 'saveDataCase1.bwp'
