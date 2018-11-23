@@ -4,7 +4,7 @@
     <sca:interface.wsdl xmi:id="_LVZ7Au2hEeiiZKyOPKXmZw" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
     <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_MWN3wO2hEeiiZKyOPKXmZw" name="SOAPServiceBinding" targetNamespace="http://com.tibco.poc.test.bw.saveDataCase" portTypeQName="com.tibco.poc.test.bw.saveDataCase:saveDataCase" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
       <bindingType xmi:id="_MWOe0O2hEeiiZKyOPKXmZw" style="DOCUMENT"/>
-      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_w9FKAO8tEeicncXnOLuPOA" jmsResource="com.tibco.poc.test.bpm.soapcall.module.JMSConnectionResource" messageType="Text"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_OnBcwO2hEeiiZKyOPKXmZw" jmsResource="com.tibco.poc.test.bpm.soapcall.module.JMSConnectionResource" messageType="Text"/>
       <operationConfiguration xmi:id="_MWOe0e2hEeiiZKyOPKXmZw" operationName="CreateCaseID" action="CreateCaseID" actionNeeded="true">
         <bindingType xmi:id="_MWOe0u2hEeiiZKyOPKXmZw"/>
         <messageConfiguration xmi:id="_MWOe0-2hEeiiZKyOPKXmZw" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
@@ -46,7 +46,7 @@
       </operationConfiguration>
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_MWOe7O2hEeiiZKyOPKXmZw" bindingName="SOAPServiceBinding">
-      <sca:property xmi:id="_yQ-a0O8tEeicncXnOLuPOA" name="destination" scaext:simpleValue="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata"/>
+      <sca:property xmi:id="_Qw1o8O2hEeiiZKyOPKXmZw" name="destination" scaext:simpleValue="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata"/>
     </scact:bindingAdjunct>
   </sca:service>
   <sca:property xmi:id="_dcieoOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
