@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+This XML file does not appear to have any style information associated
+with it. The document tree is shown below.
+<!-- Created by TIBCO WSDL -->
+<wsdl:definitions xmlns:ns1="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw"
+	xmlns:tns="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBW"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://example.com/comtibcopoctest"
+	xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jndi="http://www.tibco.com/namespaces/ws/2004/soap/apis/jndi"
+	name="DataToBW" targetNamespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBW">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw"
+			elementFormDefault="qualified" attributeFormDefault="unqualified" />
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://example.com/comtibcopoctest"
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+			<xs:import namespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw" />
+			<xs:annotation>
+				<xs:documentation>
+					<ns0:DocumentationElement
+						BOMORIGIN="/com.tibco.poc.test/Business Objects/comtibcopoctest.bom" />
+				</xs:documentation>
+			</xs:annotation>
+			<xs:complexType name="pocDBRequest">
+				<xs:sequence>
+					<xs:element name="WFCaseID" form="unqualified">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pocMetaData">
+				<xs:sequence>
+					<xs:element name="WFCaseID" form="unqualified">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="AHVNummer" form="unqualified">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="partnerID" form="unqualified">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="dokumentenArt" form="unqualified"
+						minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="kanton" form="unqualified">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="pocDBRequestElement" type="ns0:pocDBRequest" />
+			<xs:element name="pocMetaDataElement" type="ns0:pocMetaData" />
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="DataToBW_ReceiveTask_INPUT">
+		<wsdl:part name="MetaData" element="ns0:pocMetaDataElement" />
+	</wsdl:message>
+	<wsdl:portType xmlns:ns2="http://www.tibco.com/bs3.2/extensions"
+		name="DataToBW" ns2:FlowContainer="_GF0_QOmlEeiNa-ssr_CQIw">
+		<wsdl:operation name="ReceiveTask">
+			<wsdl:input message="tns:DataToBW_ReceiveTask_INPUT"
+				ns2:Event="_V6gXgvF9EeiCsd_Wv-RtYQ" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DataToBW_EP" type="tns:DataToBW">
+		<soap:binding style="document"
+			transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" />
+		<jms:binding messageFormat="text" />
+		<wsdl:operation name="ReceiveTask">
+			<wsdl:documentation />
+			<soap:operation style="document" soapAction="ReceiveTask" />
+			<wsdl:input>
+				<soap:body use="literal" parts="MetaData" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DataToBW">
+		<wsdl:port name="DataToBW_EP" binding="tns:DataToBW_EP">
+			<soap:address location="" />
+			<jndi:context>
+				<jndi:property name="java.naming.factory.initial"
+					type="java.lang.String">
+					com.tibco.tibjms.naming.TibjmsInitialContextFactory
+				</jndi:property>
+				<jndi:property name="java.naming.provider.url" type="java.lang.String">tcp://ssva90322:8222
+				</jndi:property>
+			</jndi:context>
+			<jms:connectionFactory>QueueConnectionFactory</jms:connectionFactory>
+			<!-- The element targetAddress value (com.tibco.poc.test.bw.savedata) 
+				is the jndi name of the destination. Please replace this with physical destination 
+				name at the service consumption point. -->
+			<jms:targetAddress destination="queue">com.tibco.poc.test.bw.savedata
+			</jms:targetAddress>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
