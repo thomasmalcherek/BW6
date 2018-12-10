@@ -2,16 +2,21 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Geschaeftsfall" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Kanton"/>
+			<item value="tns:GetDataWFCaseIDResponse"/>
+			<item value="GetDataRequestFromCaseID"/>
+			<item value="GetDataWFCaseIDRequest"/>
 			<item value="xsd:"/>
 			<item value="BWreceiveRequestFromBPM"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Geschaeftsfall"/>
 			<item value=""/>
 			<item value="BPMreceiveRequestFromBW"/>
 		</list>

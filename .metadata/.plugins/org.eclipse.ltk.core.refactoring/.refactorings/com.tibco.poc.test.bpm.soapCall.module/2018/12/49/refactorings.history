@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Operation from &apos;GetData&apos; to &apos;GetDataWFCaseID&apos;" description="Rename Operation from &apos;GetData&apos; to &apos;GetDataWFCaseID&apos;" flags="7" id="com.tibco.bw.core.design.refactoring.rename.operation" stamp="1544195434378"/>
+</session>

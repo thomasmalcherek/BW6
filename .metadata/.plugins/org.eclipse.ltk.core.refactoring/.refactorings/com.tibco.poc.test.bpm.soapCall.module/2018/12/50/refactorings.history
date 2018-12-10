@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/saveDataCase1.bwp&apos; to &apos;saveDataCase.bwp&apos;" description="Rename resource &apos;saveDataCase1.bwp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Processes/com/tibco/poc/test/bpm/soapcall/module/saveDataCase1.bwp" name="saveDataCase.bwp" stamp="1544430350976" updateReferences="true"/>
+</session>

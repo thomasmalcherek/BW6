@@ -13,12 +13,21 @@
 	<wsdl:message name="CreateCaseIDResponseFromBPM">
 		<wsdl:part element="extns:CreateCaseIDResponseFromBPM" name="OutputParametersFromBPM"/>
 	</wsdl:message>
-    <wsdl:message name="GetDataRequest">
+    <wsdl:message name="GetDataWFCaseIDRequest">
     <wsdl:part element="extns:GetDataRequestFromCaseID" name="GetDataPInputParameters"/>
   </wsdl:message>
-    <wsdl:message name="GetDataResponse">
-    <wsdl:part element="extns:GetDataResponseFromCaseID" name="GetDataOutputParameters"/>
+    <wsdl:message name="GetDataWFCaseIDResponse">
+    <wsdl:part element="extns:GetDataWFCaseIDResponse" name="GetDataOutputParameters"/>
   </wsdl:message>
+    <wsdl:message name="SearchDataRequest">
+    <wsdl:part element="extns:SearchDataRequest" name="GetDataPInputParameters"/>
+  </wsdl:message>
+    <wsdl:message name="SearchDataResponse">
+    <wsdl:part element="extns:SearchDataResponses" name="GetDataOutputParameters"/>
+  </wsdl:message>
+  
+  
+  
     <wsdl:portType name="saveDataCase">
 		<wsdl:operation name="CreateCaseID">
 			<wsdl:input message="tns:CreateCaseIDRequest" name="CreateCaseIDRequest"/>
@@ -28,9 +37,13 @@
 			<wsdl:input message="tns:CreateCaseIDRequestFromBPM" name="CreateCaseIDRequestFromBPM"/>
 			<wsdl:output message="tns:CreateCaseIDResponseFromBPM" name="CreateCaseIDResponseFromBPM"/>
 		</wsdl:operation>
-        <wsdl:operation name="GetData">
-      <wsdl:input message="tns:GetDataRequest" name="GetDataRequest"/>
-      <wsdl:output message="tns:GetDataResponse" name="GetDataResponse"/>
+        <wsdl:operation name="GetDataWFCaseID">
+      <wsdl:input message="tns:GetDataWFCaseIDRequest" name="GetDataRequest"/>
+      <wsdl:output message="tns:GetDataWFCaseIDResponse" name="GetDataResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="SearchData">
+      <wsdl:input message="tns:SearchDataRequest" name="SearchDataRequest"/>
+      <wsdl:output message="tns:SearchDataResponse" name="SearchDataResponse"/>
     </wsdl:operation>
     </wsdl:portType>
 
