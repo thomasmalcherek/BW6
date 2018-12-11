@@ -206,8 +206,6 @@
                             name="IN_ANZAHL_VERSUCHE" nillable="true" type="int"/>
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_STARTED_IN_BPM" nillable="true" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="IN_ANZAHL_DOKUMENTE" nillable="true" type="int"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
@@ -427,8 +425,6 @@
                             name="IN_ANZAHL_VERSUCHE" nillable="true" type="int"/>
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_STARTED_IN_BPM" nillable="true" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="IN_ANZAHL_DOKUMENTE" nillable="true" type="int"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
@@ -482,9 +478,6 @@
                                     name="ANZAHL_VERSUCHE" type="int"/>
                                     <element maxOccurs="1" minOccurs="1"
                                     name="STARTED_IN_BPM" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="ANZAHL_DOKUMENTE"
-                                    nillable="false" type="int"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -566,9 +559,6 @@
                                     name="ANZAHL_VERSUCHE" type="int"/>
                                     <element maxOccurs="1" minOccurs="1"
                                     name="STARTED_IN_BPM" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="ANZAHL_DOKUMENTE"
-                                    nillable="false" type="int"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -2885,8 +2875,6 @@
             namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+5dd61918-dc6a-404a-a411-b304640e97d4+input" prefix="tns3"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+38c32516-b6e4-45ff-b960-67e2860ac3e8+input" prefix="tns7"/>
-        <tibex:namespaceItem
-            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" namespace="http://com.tibco.poc.test.bw.saveDataCase"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://com.tibco.poc.test.bw.generateUUID"/>
@@ -3022,7 +3010,7 @@
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:param name=&quot;CreateCaseID&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&lt;tns4:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/AHV-Nummer&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_PARTNER_ID>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/IN_PARTNER_ID>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Dokumenten-Art&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Geschaeftsfall&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;IN_ANZAHL_DOKUMENTE>&lt;xsl:value-of select=&quot;xsd:int($CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Anzahl_der_Dokumente)&quot;/>&lt;/IN_ANZAHL_DOKUMENTE>&lt;/tns4:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:param name=&quot;CreateCaseID&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&lt;tns4:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/AHV-Nummer&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_PARTNER_ID>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/IN_PARTNER_ID>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Dokumenten-Art&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Geschaeftsfall&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;/tns4:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="JDBCUpdate_BW-input"
                                     name="JDBCUpdate_BW"
@@ -3036,7 +3024,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseID.InputParameters&quot;/>&#xa;    &lt;xsl:param name=&quot;Mapper&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;            &lt;IN_ANZAHL_DOKUMENTE>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($CreateCaseID.InputParameters/Anzahl_der_Dokumente)&quot;/>&#xa;            &lt;/IN_ANZAHL_DOKUMENTE>&#xa;        &lt;/tns4:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseID.InputParameters&quot;/>&#xa;    &lt;xsl:param name=&quot;Mapper&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;        &lt;/tns4:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -3051,7 +3039,7 @@
                                     <value
                                     interpretEmptyStringAsNull="true"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, PARTNER_ID,&#xa;  DOKUMENTENART, KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE)&#xa;  VALUES (?, ?, ?, ?, ?, ?, ?,?)"
+                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, PARTNER_ID,&#xa;  DOKUMENTENART, KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM)&#xa;  VALUES (?, ?, ?, ?, ?, ?, ?)"
                                     timeout="10" xsi:type="jdbcPalette:JDBCUpdateActivity">
 
                                     <PreparedParameters
@@ -3081,10 +3069,6 @@
                                     <PreparedParameters
                                     DataType="-7"
                                     DataTypeDisplayValue="BIT" ParameterName="IN_STARTED_IN_BPM"/>
-
-                                    <PreparedParameters
-                                    DataType="4"
-                                    DataTypeDisplayValue="INTEGER" ParameterName="IN_ANZAHL_DOKUMENTE"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
@@ -3221,7 +3205,7 @@
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;CreateCaseIDFromBPM&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&lt;tns6:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/AHV-Nummer&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_PARTNER_ID>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/IN_PARTNER_ID>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Dokumenten-Art&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Geschaeftsfall&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;IN_ANZAHL_DOKUMENTE>&lt;xsl:value-of select=&quot;xsd:int($CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Anzahl_der_Dokumente)&quot;/>&lt;/IN_ANZAHL_DOKUMENTE>&lt;/tns6:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseIDFromBPM&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;        &lt;/tns6:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="JDBCUpdate_BPM-input"
                                     name="JDBCUpdate_BPM"
@@ -3235,7 +3219,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseIDFromBPM.InputParametersFromBPM&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;            &lt;IN_ANZAHL_DOKUMENTE>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($CreateCaseIDFromBPM.InputParametersFromBPM/Anzahl_der_Dokumente)&quot;/>&#xa;            &lt;/IN_ANZAHL_DOKUMENTE>&#xa;        &lt;/tns6:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseIDFromBPM.InputParametersFromBPM&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;        &lt;/tns6:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -3250,7 +3234,7 @@
                                     <value
                                     interpretEmptyStringAsNull="true"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, PARTNER_ID, DOKUMENTENART,&#xa;  KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE)&#xa;  VALUES (?, ?, ?, ?, ?, ?, ?,?)"
+                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, PARTNER_ID, DOKUMENTENART,&#xa;  KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM)&#xa;  VALUES (?, ?, ?, ?, ?, ?, ?)"
                                     timeout="10" xsi:type="jdbcPalette:JDBCUpdateActivity">
 
                                     <PreparedParameters
@@ -3280,10 +3264,6 @@
                                     <PreparedParameters
                                     DataType="-7"
                                     DataTypeDisplayValue="BIT" ParameterName="IN_STARTED_IN_BPM"/>
-
-                                    <PreparedParameters
-                                    DataType="4"
-                                    DataTypeDisplayValue="INTEGER" ParameterName="IN_ANZAHL_DOKUMENTE"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
@@ -3406,10 +3386,32 @@
                                 tibex:xpdlId="18aa4ab1-acf3-4190-bc87-3caba0443c18" variable="GetDataWFCaseIDOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_WFCaseID&quot;/>&#xa;    &lt;xsl:template name=&quot;GetDataWFCaseIDOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:GetDataWFCaseIDResponse>&#xa;            &lt;CaseID>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID&quot;/>&#xa;            &lt;/CaseID>&#xa;            &lt;AHV-Nummer>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER&quot;/>&#xa;            &lt;/AHV-Nummer>&#xa;            &lt;Dokumenten-Art>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART&quot;/>&#xa;            &lt;/Dokumenten-Art>&#xa;            &lt;Geschaeftsfall>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL&quot;/>&#xa;            &lt;/Geschaeftsfall>&#xa;            &lt;Anzahl_der_Dokumente>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/ANZAHL_VERSUCHE&quot;/>&#xa;            &lt;/Anzahl_der_Dokumente>&#xa;        &lt;/tns2:GetDataWFCaseIDResponse>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_WFCaseID&quot;/>&#xa;    &lt;xsl:template name=&quot;GetDataWFCaseIDOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:GetDataWFCaseIDResponse>&#xa;            &lt;CaseID>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID&quot;/>&#xa;            &lt;/CaseID>&#xa;            &lt;AHV-Nummer>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER&quot;/>&#xa;            &lt;/AHV-Nummer>&#xa;            &lt;Dokumenten-Art>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART&quot;/>&#xa;            &lt;/Dokumenten-Art>&#xa;            &lt;Geschaeftsfall>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL&quot;/>&#xa;            &lt;/Geschaeftsfall>&#xa;        &lt;/tns2:GetDataWFCaseIDResponse>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_WFCaseID"/&gt;&lt;xsl:template name="GetDataWFCaseIDOut-input" match="/"&gt;&lt;tns:GetDataWFCaseIDResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:GetDataWFCaseIDResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/ANZAHL_VERSUCHE"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/tns2:GetDataWFCaseIDResponse&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:GetDataWFCaseIDResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;
+    &lt;xsl:param name="JDBCQuery_WFCaseID"/&gt;
+    &lt;xsl:template name="GetDataWFCaseIDOut-input" match="/"&gt;
+        &lt;tns:GetDataWFCaseIDResponse&gt;
+            &lt;GetDataOutputParameters&gt;
+                &lt;tns2:GetDataWFCaseIDResponse&gt;
+                    &lt;CaseID&gt;
+                        &lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID"/&gt;
+                    &lt;/CaseID&gt;
+                    &lt;AHV-Nummer&gt;
+                        &lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER"/&gt;
+                    &lt;/AHV-Nummer&gt;
+                    &lt;Dokumenten-Art&gt;
+                        &lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART"/&gt;
+                    &lt;/Dokumenten-Art&gt;
+                    &lt;Geschaeftsfall&gt;
+                        &lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL"/&gt;
+                    &lt;/Geschaeftsfall&gt;
+                &lt;/tns2:GetDataWFCaseIDResponse&gt;
+            &lt;/GetDataOutputParameters&gt;
+        &lt;/tns:GetDataWFCaseIDResponse&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
                                     <bpws:target linkName="JDBCQueryToGetDataWFCaseIDOut"/>
                                 </bpws:targets>
@@ -3487,7 +3489,7 @@
                                     interpretEmptyStringAsNull="true"
                                     maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT WF_CASE_ID, AHV_NUMMER, PARTNER_ID, DOKUMENTENART, GESCHAEFTSFALL,&#xa;  ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE&#xa;  FROM WFDATA_DBA.WFDATA_BPM&#xa;  WHERE WF_CASE_ID = ?&#xa;"
+                                    sqlStatement="SELECT WF_CASE_ID, AHV_NUMMER, PARTNER_ID, DOKUMENTENART, GESCHAEFTSFALL,&#xa;  ANZAHL_VERSUCHE, STARTED_IN_BPM&#xa;  FROM WFDATA_DBA.WFDATA_BPM&#xa;  WHERE WF_CASE_ID = ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
 
                                     <PreparedParameters
@@ -3518,10 +3520,6 @@
                                     <columnMetadata
                                     columnName="STARTED_IN_BPM"
                                     dataType="12" typeName="VARCHAR"/>
-                                    <columnMetadata
-                                    columnName="ANZAHL_DOKUMENTE"
-                                    dataType="4"
-                                    status="OptionalElement" typeName="INTEGER"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
@@ -3605,10 +3603,10 @@
                                 tibex:xpdlId="aa2faf1f-4302-4275-9442-cd96fd7cce08" variable="SearchDataOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_Like&quot;/>&#xa;    &lt;xsl:template name=&quot;SearchDataOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:SearchDataResponses>&#xa;            &lt;xsl:for-each select=&quot;$JDBCQuery_Like/Record&quot;>&#xa;                &lt;SearchDataResponse>&#xa;                    &lt;CaseID>&#xa;                        &lt;xsl:value-of select=&quot;WF_CASE_ID&quot;/>&#xa;                    &lt;/CaseID>&#xa;                    &lt;AHV-Nummer>&#xa;                        &lt;xsl:value-of select=&quot;AHV_NUMMER&quot;/>&#xa;                    &lt;/AHV-Nummer>&#xa;                    &lt;Dokumenten-Art>&#xa;                        &lt;xsl:value-of select=&quot;DOKUMENTENART&quot;/>&#xa;                    &lt;/Dokumenten-Art>&#xa;                    &lt;Geschaeftsfall>&#xa;                        &lt;xsl:value-of select=&quot;GESCHAEFTSFALL&quot;/>&#xa;                    &lt;/Geschaeftsfall>&#xa;                    &lt;Anzahl_der_Dokumente>&#xa;                        &lt;xsl:value-of select=&quot;ANZAHL_DOKUMENTE&quot;/>&#xa;                    &lt;/Anzahl_der_Dokumente>&#xa;                &lt;/SearchDataResponse>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns2:SearchDataResponses>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_Like&quot;/>&#xa;    &lt;xsl:template name=&quot;SearchDataOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:SearchDataResponses>&#xa;            &lt;xsl:for-each select=&quot;$JDBCQuery_Like/Record&quot;>&#xa;                &lt;SearchDataResponse>&#xa;                    &lt;CaseID>&#xa;                        &lt;xsl:value-of select=&quot;WF_CASE_ID&quot;/>&#xa;                    &lt;/CaseID>&#xa;                    &lt;AHV-Nummer>&#xa;                        &lt;xsl:value-of select=&quot;AHV_NUMMER&quot;/>&#xa;                    &lt;/AHV-Nummer>&#xa;                    &lt;Dokumenten-Art>&#xa;                        &lt;xsl:value-of select=&quot;DOKUMENTENART&quot;/>&#xa;                    &lt;/Dokumenten-Art>&#xa;                    &lt;Geschaeftsfall>&#xa;                        &lt;xsl:value-of select=&quot;GESCHAEFTSFALL&quot;/>&#xa;                    &lt;/Geschaeftsfall>&#xa;                &lt;/SearchDataResponse>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns2:SearchDataResponses>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_Like"/&gt;&lt;xsl:template name="SearchDataOut-input" match="/"&gt;&lt;tns:SearchDataResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:SearchDataResponses&gt;&lt;xsl:for-each select="$JDBCQuery_Like/Record"&gt;&lt;SearchDataResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="ANZAHL_DOKUMENTE"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/SearchDataResponse&gt;&lt;/xsl:for-each&gt;&lt;/tns2:SearchDataResponses&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:SearchDataResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_Like"/&gt;&lt;xsl:template name="SearchDataOut-input" match="/"&gt;&lt;tns:SearchDataResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:SearchDataResponses&gt;&lt;xsl:for-each select="$JDBCQuery_Like/Record"&gt;&lt;SearchDataResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;/SearchDataResponse&gt;&lt;/xsl:for-each&gt;&lt;/tns2:SearchDataResponses&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:SearchDataResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
                                     <bpws:target linkName="Copy_1_JDBCQueryToSearchDataOut"/>
                                 </bpws:targets>
@@ -3684,7 +3682,7 @@
                                     interpretEmptyStringAsNull="true"
                                     maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT  WF_CASE_ID,AHV_NUMMER, PARTNER_ID, DOKUMENTENART, GESCHAEFTSFALL, ANZAHL_VERSUCHE, STARTED_IN_BPM, ANZAHL_DOKUMENTE&#xa;FROM WFDATA_DBA.WFDATA_BPM Where AHV_NUMMER LIKE ? OR DOKUMENTENART LIKE ? OR GESCHAEFTSFALL LIKE ?&#xa;"
+                                    sqlStatement="SELECT  WF_CASE_ID,AHV_NUMMER, PARTNER_ID, DOKUMENTENART, GESCHAEFTSFALL, ANZAHL_VERSUCHE, STARTED_IN_BPM&#xa;FROM WFDATA_DBA.WFDATA_BPM Where AHV_NUMMER LIKE ? OR DOKUMENTENART LIKE ? OR GESCHAEFTSFALL LIKE ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
 
                                     <PreparedParameters
@@ -3723,10 +3721,6 @@
                                     <columnMetadata
                                     columnName="STARTED_IN_BPM"
                                     dataType="12" typeName="VARCHAR"/>
-                                    <columnMetadata
-                                    columnName="ANZAHL_DOKUMENTE"
-                                    dataType="4"
-                                    status="OptionalElement" typeName="INTEGER"/>
                                     </value>
                                     </properties>
                                     </activityConfig>

@@ -8,7 +8,6 @@
 				<element name="AHV-Nummer" type="string" />
 				<element name="Dokumenten-Art" type="string" />
 				<element name="Geschaeftsfall" type="string" />
-				<element name="Anzahl_der_Dokumente" type="integer" />
 			</sequence>
 		</complexType>
 	</element>
@@ -27,7 +26,6 @@
 				<element name="AHV-Nummer" type="string" />
 				<element name="Dokumenten-Art" type="string" />
 				<element name="Geschaeftsfall" type="string" />
-				<element name="Anzahl_der_Dokumente" type="integer" />
 			</sequence>
 		</complexType>
 	</element>
@@ -53,7 +51,6 @@
 				<element name="AHV-Nummer" type="string" />
 				<element name="Dokumenten-Art" type="string" />
 				<element name="Geschaeftsfall" type="string" />
-				<element name="Anzahl_der_Dokumente" type="integer" />
 			</sequence>
 		</complexType>
 	</element>
@@ -69,7 +66,6 @@
 							<element name="AHV-Nummer" type="string" />
 							<element name="Dokumenten-Art" type="string" />
 							<element name="Geschaeftsfall" type="string" />
-							<element name="Anzahl_der_Dokumente" type="integer" />
 						</sequence>
 					</complexType>
 				</element>
