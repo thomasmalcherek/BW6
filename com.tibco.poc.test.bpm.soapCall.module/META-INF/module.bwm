@@ -3,8 +3,8 @@
   <sca:service xmi:id="_SQbEAPxVEei0w9-0ekveoA" name="saveDataCase" promote="ComponentsaveDataCase/saveDataCase">
     <sca:interface.wsdl xmi:id="_SQmqMPxVEei0w9-0ekveoA" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
     <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_T1EGkPxVEei0w9-0ekveoA" name="SOAPServiceBinding" targetNamespace="http://com.tibco.poc.test.bw.saveDataCase" portTypeQName="com.tibco.poc.test.bw.saveDataCase:saveDataCase" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
-      <bindingType xmi:id="_T1dvMPxVEei0w9-0ekveoA"/>
-      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_WwMa8PxVEei0w9-0ekveoA" endpointURI="/saveDataCase" httpConnector="com.tibco.poc.test.bpm.soapcall.module.HTTPConnectorResource"/>
+      <bindingType xmi:id="_T1dvMPxVEei0w9-0ekveoA" style="DOCUMENT"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_mMoU4P0zEeiFoPbFR85sAw" endpointURI="/saveDataCase/" httpConnector="com.tibco.poc.test.bpm.soapcall.module.HTTPConnectorResource"/>
       <operationConfiguration xmi:id="_T1iAoPxVEei0w9-0ekveoA" operationName="CreateCaseID" action="CreateCaseID" actionNeeded="true">
         <bindingType xmi:id="_T1iAofxVEei0w9-0ekveoA"/>
         <messageConfiguration xmi:id="_T1iAovxVEei0w9-0ekveoA" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
