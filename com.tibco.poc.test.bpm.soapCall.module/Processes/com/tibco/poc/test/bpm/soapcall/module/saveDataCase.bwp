@@ -3621,6 +3621,7 @@
                                 <bpws:sources>
                                     <bpws:source linkName="SearchDataOutToCopy_1_LogStartSearchData"/>
                                 </bpws:sources>
+                                <bpws:correlations/>
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension

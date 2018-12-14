@@ -83,7 +83,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//com.tibco.poc.test.bpm.soapCall.module///JMS_BPM_BW6/com.tibco.poc.test.bw.savedata</name>
-			<value>com.tibco.poc.test.bw.savedata.search</value>
+			<value>com.tibco.poc.test.bw.savedata</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
