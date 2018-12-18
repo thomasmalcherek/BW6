@@ -7335,3 +7335,666 @@ Binding(CTRL+O,
 
 !ENTRY org.eclipse.bpel.validator 1 0 2018-12-14 16:21:48.349
 !MESSAGE Validator Startup 1126ms
+!SESSION 2018-12-17 12:05:54.989 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -showlocation
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2018-12-17 12:05:57.748
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2018-12-17 12:05:57.748
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jms.provider.template 4 0 2018-12-17 12:05:57.826
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jms.provider.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jms.provider.template 4 0 2018-12-17 12:05:57.842
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jms.provider.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.718
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.transport.eclipse' and 'com.tibco.amf.sharedresource.model.transport.eclipse' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/httpconnector'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.718
+!MESSAGE Both 'com.tibco.bw.core.model.eclipse' and 'com.tibco.bw.core.model.eclipse' register a package for 'http://ns.tibco.com/bw/core/internalactivity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.733
+!MESSAGE Both 'com.tibco.bw.sharedresource.http.model' and 'com.tibco.bw.sharedresource.http.model' register a package for 'http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.733
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.data.eclipse' and 'com.tibco.bw.sharedresource.jdbc.model' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.733
+!MESSAGE Both 'com.tibco.amf.sca.model.eclipse' and 'com.tibco.bw.sharedresource.ws.policy.model' register a package for 'http://schemas.xmlsoap.org/ws/2004/09/policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.752
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/extensions/soap/tibcojms'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.752
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/soap12'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.765
+!MESSAGE Both 'com.tibco.bw.sharedresource.identity.model' and 'com.tibco.bw.sharedresource.ws.policy.model' register an extension parser for 'policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.765
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'auth'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.765
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'identity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-12-17 12:16:07.781
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'userid'
+
+!ENTRY org.eclipse.ui 2 0 2018-12-17 12:16:08.421
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-12-17 12:16:08.421
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.migration2x.ui', id='com.tibco.amf.tools.migration2x.ui.migrateTo3xCommand', categoryId='com.tibco.amf.tools.composite.resources.ui.TasksCategory'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-12-17 12:16:08.421
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.packager.ui', id='com.tibco.amf.tools.packager.ui.createDaa.command', categoryId='tibco.category.soa_platform'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-12-17 12:16:08.421
+!MESSAGE Commands should really have a category: plug-in='com.tibco.bw.binding.soap.axis2.design', id='com.tibco.bw.binding.soap.axis2.design.generateWSDL', categoryId='tibco.category.soa_platform'
+
+!ENTRY org.eclipse.ui 2 0 2018-12-17 12:16:10.018
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-12-17 12:16:10.018
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.migration2x.ui', id='com.tibco.amf.tools.migration2x.ui.migrateTo3xCommand', categoryId='com.tibco.amf.tools.composite.resources.ui.TasksCategory'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-12-17 12:16:10.018
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.packager.ui', id='com.tibco.amf.tools.packager.ui.createDaa.command', categoryId='tibco.category.soa_platform'
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-12-17 12:16:10.018
+!MESSAGE Commands should really have a category: plug-in='com.tibco.bw.binding.soap.axis2.design', id='com.tibco.bw.binding.soap.axis2.design.generateWSDL', categoryId='tibco.category.soa_platform'
+
+!ENTRY com.tibco.xpd.fragments 4 0 2018-12-17 12:16:27.547
+!MESSAGE com.tibco.xpd.fragments.internal.FragmentsManager$5.run(FragmentsManager.java:787) FragmentsManager.initialize(): No root categories found!!!
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-12-17 12:33:54.142
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.HasOneStoreConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-12-17 12:33:54.158
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyAliasNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-12-17 12:33:54.174
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyPasswordNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-12-17 12:33:54.174
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.trust.editor.constraint" could not find target EMF type "TrustConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2018-12-17 12:33:56.009
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.ssl.editor.com.tibco.trinity.ssl.editor.invalid.remote.host.constraint" could not find target EMF type "SSLServerConfiguration."
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:33:56.228
+!MESSAGE Failed to connect to the debugger. Attempt 1 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:33:56.228
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:33:59.306
+!MESSAGE Failed to connect to the debugger. Attempt 2 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:33:59.306
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:02.628
+!MESSAGE Failed to connect to the debugger. Attempt 3 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:02.628
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:05.659
+!MESSAGE Failed to connect to the debugger. Attempt 4 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:05.659
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:08.690
+!MESSAGE Failed to connect to the debugger. Attempt 5 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:08.690
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:11.753
+!MESSAGE Failed to connect to the debugger. Attempt 6 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:11.753
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:14.800
+!MESSAGE Failed to connect to the debugger. Attempt 7 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:14.800
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:17.832
+!MESSAGE Failed to connect to the debugger. Attempt 8 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:17.832
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:20.888
+!MESSAGE Failed to connect to the debugger. Attempt 9 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:20.888
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:23.944
+!MESSAGE Failed to connect to the debugger. Attempt 10 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:23.944
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 4 0 2018-12-17 12:34:26.974
+!MESSAGE Failed to connect to the debugger. Attempt 11 to connect.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to connect to the debugger
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:90)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	... 2 more
+!SUBENTRY 1 com.tibco.bw.core.design.debug 4 0 2018-12-17 12:34:26.974
+!MESSAGE Failed to connect to the debugger
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at com.sun.jmx.remote.socket.SocketConnection.connect(SocketConnection.java:94)
+	at com.sun.jmx.remote.generic.ClientSynchroMessageConnectionImpl.connect(ClientSynchroMessageConnectionImpl.java:70)
+	at javax.management.remote.generic.GenericConnector.connect(GenericConnector.java:177)
+	at javax.management.remote.jmxmp.JMXMPConnector.connect(JMXMPConnector.java:119)
+	at javax.management.remote.JMXConnectorFactory.connect(JMXConnectorFactory.java:270)
+	at com.tibco.bw.core.design.debug.jmx.utils.JMXDebugUtil.getJMXConnector(JMXDebugUtil.java:53)
+	at com.tibco.bw.core.design.debug.jmx.JMXMPConnection.isValid(JMXMPConnection.java:83)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$1.run(BWStandaloneLaunchDelegate.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.core.design.debug.ui 1 0 2018-12-17 12:34:29.409
+!MESSAGE Debugger successfully connected.
