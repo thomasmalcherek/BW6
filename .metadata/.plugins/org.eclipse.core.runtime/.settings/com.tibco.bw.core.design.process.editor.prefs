@@ -53,6 +53,10 @@
 //com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/DataToBW.bwp.favorite.expansionstate=1
 //com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/DataToBW.bwp.library.expansionstate=0
 //com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/DataToBW.bwp.recent.expansionstate=1
+//com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/GeschaeftfallPerDokumentenArt.bwp.displayer.openstate=1
+//com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/GeschaeftfallPerDokumentenArt.bwp.favorite.expansionstate=1
+//com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/GeschaeftfallPerDokumentenArt.bwp.library.expansionstate=0
+//com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/GeschaeftfallPerDokumentenArt.bwp.recent.expansionstate=1
 //com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/Process.bwp.displayer.openstate=0
 //com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/Process.bwp.displayer.targetpalette=com.tibco.bw.core.palette.bpel.design
 //com.tibco.poc.test.bpm.soapCall.module/Processes/com/tibco/poc/test/bpm/soapcall/module/Process.bwp.favorite.expansionstate=1
@@ -84,6 +88,14 @@
 //tibco.bw.sample.binding.rest.Basic/Processes/tibco/bw/sample/binding/rest/basic/books.bwp.favorite.expansionstate=1
 //tibco.bw.sample.binding.rest.Basic/Processes/tibco/bw/sample/binding/rest/basic/books.bwp.library.expansionstate=0
 //tibco.bw.sample.binding.rest.Basic/Processes/tibco/bw/sample/binding/rest/basic/books.bwp.recent.expansionstate=1
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/CreateMoviesProcess.bwp.displayer.openstate=1
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/CreateMoviesProcess.bwp.favorite.expansionstate=1
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/CreateMoviesProcess.bwp.library.expansionstate=0
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/CreateMoviesProcess.bwp.recent.expansionstate=1
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/MainProcess.bwp.displayer.openstate=1
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/MainProcess.bwp.favorite.expansionstate=1
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/MainProcess.bwp.library.expansionstate=0
+//tibco.bw.sample.core.soa.CallProcess/Processes/tibco/bw/sample/core/soa/callprocess/MainProcess.bwp.recent.expansionstate=1
 //tibco.bw.test.rest.module/Processes/tibco/bw/test/rest/module/Process.bwp.displayer.openstate=1
 //tibco.bw.test.rest.module/Processes/tibco/bw/test/rest/module/Process.bwp.favorite.expansionstate=1
 //tibco.bw.test.rest.module/Processes/tibco/bw/test/rest/module/Process.bwp.library.expansionstate=0

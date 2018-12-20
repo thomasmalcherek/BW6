@@ -15,6 +15,7 @@
     xmlns:ns14="http://www.tibco.com/namespaces/tnt/plugins/jdbc+38c32516-b6e4-45ff-b960-67e2860ac3e8+output"
     xmlns:ns15="http://www.tibco.com/namespaces/tnt/plugins/jdbc+1b69b6b7-bfea-4bda-8efb-832038e59075+input"
     xmlns:ns16="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.SQLDirect"
+    xmlns:ns17="http://com.tibco.poc.test.bw.saveDataCaseXSD"
     xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input"
     xmlns:ns3="http://www.tibco.com/namespaces/tnt/plugins/jdbc"
     xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.jdbc.update"
@@ -199,9 +200,9 @@
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_AHV_NUMMER" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
-                            name="IN_PARTNER_ID" nillable="true" type="string"/>
-                        <element maxOccurs="1" minOccurs="1"
                             name="IN_DOKUMENTENART" nillable="true" type="string"/>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="IN_DOSSIERID" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_GESCHAEFTSFALL" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
@@ -420,8 +421,6 @@
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_AHV_NUMMER" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
-                            name="IN_PARTNER_ID" nillable="true" type="string"/>
-                        <element maxOccurs="1" minOccurs="1"
                             name="IN_DOKUMENTENART" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_GESCHAEFTSFALL" nillable="true" type="string"/>
@@ -472,9 +471,6 @@
                                     name="AHV_NUMMER"
                                     nillable="false" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
-                                    name="PARTNER_ID"
-                                    nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
                                     name="DOKUMENTENART"
                                     nillable="false" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
@@ -487,6 +483,9 @@
                                     <element maxOccurs="1" minOccurs="0"
                                     name="ANZAHL_DOKUMENTE"
                                     nillable="false" type="int"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DOSSIERID"
+                                    nillable="false" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -556,9 +555,6 @@
                                     name="AHV_NUMMER"
                                     nillable="false" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
-                                    name="PARTNER_ID"
-                                    nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
                                     name="DOKUMENTENART"
                                     nillable="false" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
@@ -571,6 +567,9 @@
                                     <element maxOccurs="1" minOccurs="0"
                                     name="ANZAHL_DOKUMENTE"
                                     nillable="false" type="int"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DOSSIERID"
+                                    nillable="false" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -838,7 +837,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="445"
+                                    x="580"
                                     xsi:type="notation:Bounds" y="59"/>
                                     </children>
 
@@ -902,7 +901,7 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="281"
+                                    x="474"
                                     xsi:type="notation:Bounds" y="59"/>
                                     </children>
 
@@ -966,7 +965,7 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="178"
+                                    x="172"
                                     xsi:type="notation:Bounds" y="59"/>
                                     </children>
 
@@ -1034,6 +1033,60 @@
                                     xsi:type="notation:Bounds" y="59"/>
                                     </children>
 
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint
+                                    x="304"
+                                    xsi:type="notation:Bounds" y="59"/>
+                                    </children>
+
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1057,8 +1110,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="145"
-                                    width="717" xsi:type="notation:Bounds"/>
+                                    height="147"
+                                    width="782" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -2635,17 +2688,6 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
@@ -2653,7 +2695,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2664,7 +2706,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[25, 0, -139, 0]$[140, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2675,7 +2717,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.3"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
             <bendpoints points="[12, 2, -146, -29]$[134, 26, -24, -5]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2686,7 +2728,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.4"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[25, -3, -227, 28]$[240, -30, -12, 1]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2865,6 +2907,28 @@
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity/@links/@children.4"/>
             <bendpoints points="[25, -6, -222, 52]$[235, -56, -12, 2]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[25, 3, -196, -24]$[197, 24, -24, -3]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 0, -145, 0]$[146, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -2896,6 +2960,7 @@
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" namespace="http://com.tibco.poc.test.bw.saveDataCase"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://com.tibco.poc.test.bw.generateUUID"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://com.tibco.poc.test.bw.saveDataCaseXSD"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="saveDataCase"
             partnerLinkType="ns:partnerLinkType" sca-bpel:ignore="false" sca-bpel:service="saveDataCase"/>
@@ -2967,6 +3032,12 @@
             name="_error_JDBCQuery_Like" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:ActivityInput"
             name="LogEndSearchData-input" sca-bpel:internal="true"/>
+        <bpws:variable
+            element="ns17:GetGeschaeftsfallPerDokumentenArtRequest"
+            name="GeschaeftfallPerDokumentenArt-input" sca-bpel:internal="true"/>
+        <bpws:variable
+            element="ns17:GetGeschaeftsfallPerDokumentenArtResponse"
+            name="GeschaeftfallPerDokumentenArt" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2987,7 +3058,6 @@
                     <bpws:scope name="scope1">
                         <bpws:flow name="flow1">
                             <bpws:links>
-                                <bpws:link name="MapperToJDBCUpdate" tibex:linkType="SUCCESS"/>
                                 <bpws:link name="LogToMapper" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="JDBCUpdate_BWToCreateCaseIDOut" tibex:linkType="SUCCESS"/>
@@ -2995,6 +3065,10 @@
                                     name="OnMessageStartToLogStartCreateCaseID" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="CreateCaseIDOutToOnMessageEnd" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="MapperToGeschaeftfallPerDokumentenArt" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="GeschaeftfallPerDokumentenArtToJDBCUpdate_BW" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="fa6deb4f-aa65-4680-a47c-39b9e8f74085">
@@ -3028,21 +3102,21 @@
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:param name=&quot;CreateCaseID&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&lt;tns4:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/AHV-Nummer&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_PARTNER_ID>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/IN_PARTNER_ID>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Dokumenten-Art&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Geschaeftsfall&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;IN_ANZAHL_DOKUMENTE>&lt;xsl:value-of select=&quot;xsd:int($CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Anzahl_der_Dokumente)&quot;/>&lt;/IN_ANZAHL_DOKUMENTE>&lt;/tns4:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:param name=&quot;CreateCaseID&quot;/>&lt;xsl:param name=&quot;GeschaeftfallPerDokumentenArt&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&lt;tns4:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;upper-case($CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/AHV-Nummer)&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;upper-case($CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Dokumenten-Art)&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_DOSSIERID>&lt;xsl:value-of select=&quot;upper-case($CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/DossierID)&quot;/>&lt;/IN_DOSSIERID>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;upper-case($GeschaeftfallPerDokumentenArt/Geschaeftsfall)&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;IN_ANZAHL_DOKUMENTE>&lt;xsl:value-of select=&quot;xsd:int($CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Anzahl_der_Dokumente)&quot;/>&lt;/IN_ANZAHL_DOKUMENTE>&lt;/tns4:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="JDBCUpdate_BW-input"
                                     name="JDBCUpdate_BW"
                                     outputVariable="JDBCUpdate_BW"
                                     tibex:xpdlId="9d0cade7-b546-489b-8a40-ea276d35e383" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
-                                    <bpws:target linkName="MapperToJDBCUpdate"/>
+                                    <bpws:target linkName="GeschaeftfallPerDokumentenArtToJDBCUpdate_BW"/>
                                     </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="JDBCUpdate_BWToCreateCaseIDOut"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseID.InputParameters&quot;/>&#xa;    &lt;xsl:param name=&quot;Mapper&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;            &lt;IN_ANZAHL_DOKUMENTE>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($CreateCaseID.InputParameters/Anzahl_der_Dokumente)&quot;/>&#xa;            &lt;/IN_ANZAHL_DOKUMENTE>&#xa;        &lt;/tns4:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d0cade7-b546-489b-8a40-ea276d35e383+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://com.tibco.poc.test.bw.generateUUID&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseID.InputParameters&quot;/>&#xa;    &lt;xsl:param name=&quot;Mapper&quot;/>&#xa;    &lt;xsl:param name=&quot;GeschaeftfallPerDokumentenArt&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BW-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$Mapper/tns1:CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;upper-case($CreateCaseID.InputParameters/AHV-Nummer)&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;upper-case($CreateCaseID.InputParameters/Dokumenten-Art)&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_DOSSIERID>&#xa;                &lt;xsl:value-of select=&quot;upper-case($CreateCaseID.InputParameters/DossierID)&quot;/>&#xa;            &lt;/IN_DOSSIERID>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;upper-case($GeschaeftfallPerDokumentenArt/Geschaeftsfall)&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;            &lt;IN_ANZAHL_DOKUMENTE>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($CreateCaseID.InputParameters/Anzahl_der_Dokumente)&quot;/>&#xa;            &lt;/IN_ANZAHL_DOKUMENTE>&#xa;        &lt;/tns4:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -3057,7 +3131,7 @@
                                     <value
                                     interpretEmptyStringAsNull="true"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, PARTNER_ID,&#xa;  DOKUMENTENART, KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE)&#xa;  VALUES (?, ?, ?, ?, ?, ?, ?,?)"
+                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER,&#xa;  DOKUMENTENART, ,DOSSIERID, GESCHAEFTSFALL ,ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE)&#xa;  VALUES (?, ?, ?, ?, ?, ?,?,?)"
                                     timeout="10" xsi:type="jdbcPalette:JDBCUpdateActivity">
 
                                     <PreparedParameters
@@ -3070,11 +3144,11 @@
 
                                     <PreparedParameters
                                     DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_PARTNER_ID"/>
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_DOKUMENTENART"/>
 
                                     <PreparedParameters
                                     DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_DOKUMENTENART"/>
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_DOSSIERID"/>
 
                                     <PreparedParameters
                                     DataType="12"
@@ -3108,7 +3182,7 @@
                                     <bpws:target linkName="LogToMapper"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="MapperToJDBCUpdate"/>
+                                    <bpws:source linkName="MapperToGeschaeftfallPerDokumentenArt"/>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
@@ -3172,6 +3246,29 @@
                                     </tibex:config>
                                 </tibex:activityExtension>
                             </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;CreateCaseID&quot;/>&lt;xsl:template name=&quot;GeschaeftfallPerDokumentenArt-input&quot; match=&quot;/&quot;>&lt;tns2:GetGeschaeftsfallPerDokumentenArtRequest>&lt;Dokumenten-Art>&lt;xsl:value-of select=&quot;$CreateCaseID/InputParameters/tns2:CreateCaseIDRequest/Dokumenten-Art&quot;/>&lt;/Dokumenten-Art>&lt;/tns2:GetGeschaeftsfallPerDokumentenArtRequest>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="GeschaeftfallPerDokumentenArt-input"
+                                    name="GeschaeftfallPerDokumentenArt"
+                                    outputVariable="GeschaeftfallPerDokumentenArt"
+                                    tibex:xpdlId="f234e9df-d269-41ae-953c-9ea1844cea0f"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="MapperToGeschaeftfallPerDokumentenArt"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="GeschaeftfallPerDokumentenArtToJDBCUpdate_BW"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseID.InputParameters&quot;/>&#xa;    &lt;xsl:template name=&quot;GeschaeftfallPerDokumentenArt-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:GetGeschaeftsfallPerDokumentenArtRequest>&#xa;            &lt;Dokumenten-Art>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseID.InputParameters/Dokumenten-Art&quot;/>&#xa;            &lt;/Dokumenten-Art>&#xa;        &lt;/tns2:GetGeschaeftsfallPerDokumentenArtRequest>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="com.tibco.poc.test.bpm.soapcall.module.GeschaeftfallPerDokumentenArt" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
@@ -3227,7 +3324,7 @@
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;CreateCaseIDFromBPM&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&lt;tns6:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/AHV-Nummer&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_PARTNER_ID>&lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&lt;/IN_PARTNER_ID>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Dokumenten-Art&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Geschaeftsfall&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;IN_ANZAHL_DOKUMENTE>&lt;xsl:value-of select=&quot;xsd:int($CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Anzahl_der_Dokumente)&quot;/>&lt;/IN_ANZAHL_DOKUMENTE>&lt;/tns6:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;CreateCaseIDFromBPM&quot;/>&lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&lt;tns6:jdbcUpdateActivityInput>&lt;IN_WF_CASE_ID>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/CaseID&quot;/>&lt;/IN_WF_CASE_ID>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/AHV-Nummer&quot;/>&lt;/IN_AHV_NUMMER>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Dokumenten-Art&quot;/>&lt;/IN_DOKUMENTENART>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Geschaeftsfall&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;IN_ANZAHL_VERSUCHE>&lt;xsl:value-of select=&quot;15&quot;/>&lt;/IN_ANZAHL_VERSUCHE>&lt;IN_STARTED_IN_BPM>&lt;xsl:value-of select=&quot;false()&quot;/>&lt;/IN_STARTED_IN_BPM>&lt;IN_ANZAHL_DOKUMENTE>&lt;xsl:value-of select=&quot;xsd:int($CreateCaseIDFromBPM/InputParametersFromBPM/tns2:CreateCaseIDRequestFromBPM/Anzahl_der_Dokumente)&quot;/>&lt;/IN_ANZAHL_DOKUMENTE>&lt;/tns6:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="JDBCUpdate_BPM-input"
                                     name="JDBCUpdate_BPM"
@@ -3241,7 +3338,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseIDFromBPM.InputParametersFromBPM&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_PARTNER_ID>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;&amp;quot;&quot;/>&#xa;            &lt;/IN_PARTNER_ID>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;            &lt;IN_ANZAHL_DOKUMENTE>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($CreateCaseIDFromBPM.InputParametersFromBPM/Anzahl_der_Dokumente)&quot;/>&#xa;            &lt;/IN_ANZAHL_DOKUMENTE>&#xa;        &lt;/tns6:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns6=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d77748a8-e0cf-46ad-8088-7e36eb53a254+input&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;CreateCaseIDFromBPM.InputParametersFromBPM&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCUpdate_BPM-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:jdbcUpdateActivityInput>&#xa;            &lt;IN_WF_CASE_ID>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/CaseID&quot;/>&#xa;            &lt;/IN_WF_CASE_ID>&#xa;            &lt;IN_AHV_NUMMER>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/AHV-Nummer&quot;/>&#xa;            &lt;/IN_AHV_NUMMER>&#xa;            &lt;IN_DOKUMENTENART>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Dokumenten-Art&quot;/>&#xa;            &lt;/IN_DOKUMENTENART>&#xa;            &lt;IN_GESCHAEFTSFALL>&#xa;                &lt;xsl:value-of select=&quot;$CreateCaseIDFromBPM.InputParametersFromBPM/Geschaeftsfall&quot;/>&#xa;            &lt;/IN_GESCHAEFTSFALL>&#xa;            &lt;IN_ANZAHL_VERSUCHE>&#xa;                &lt;xsl:value-of select=&quot;15&quot;/>&#xa;            &lt;/IN_ANZAHL_VERSUCHE>&#xa;            &lt;IN_STARTED_IN_BPM>&#xa;                &lt;xsl:value-of select=&quot;false()&quot;/>&#xa;            &lt;/IN_STARTED_IN_BPM>&#xa;            &lt;IN_ANZAHL_DOKUMENTE>&#xa;                &lt;xsl:value-of select=&quot;xsd:int($CreateCaseIDFromBPM.InputParametersFromBPM/Anzahl_der_Dokumente)&quot;/>&#xa;            &lt;/IN_ANZAHL_DOKUMENTE>&#xa;        &lt;/tns6:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -3256,7 +3353,7 @@
                                     <value
                                     interpretEmptyStringAsNull="true"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, PARTNER_ID, DOKUMENTENART,&#xa;  KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE)&#xa;  VALUES (?, ?, ?, ?, ?, ?, ?,?)"
+                                    sqlStatement="INSERT INTO WFDATA_DBA.WFDATA_BPM (WF_CASE_ID, AHV_NUMMER, DOKUMENTENART,&#xa;  KANTON, ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE)&#xa;  VALUES (?, ?, ?, ?, ?, ?,?)"
                                     timeout="10" xsi:type="jdbcPalette:JDBCUpdateActivity">
 
                                     <PreparedParameters
@@ -3266,10 +3363,6 @@
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="IN_AHV_NUMMER"/>
-
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_PARTNER_ID"/>
 
                                     <PreparedParameters
                                     DataType="12"
@@ -3412,10 +3505,10 @@
                                 tibex:xpdlId="18aa4ab1-acf3-4190-bc87-3caba0443c18" variable="GetDataWFCaseIDOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_WFCaseID&quot;/>&#xa;    &lt;xsl:template name=&quot;GetDataWFCaseIDOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:GetDataWFCaseIDResponse>&#xa;            &lt;CaseID>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID&quot;/>&#xa;            &lt;/CaseID>&#xa;            &lt;AHV-Nummer>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER&quot;/>&#xa;            &lt;/AHV-Nummer>&#xa;            &lt;Dokumenten-Art>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART&quot;/>&#xa;            &lt;/Dokumenten-Art>&#xa;            &lt;Geschaeftsfall>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL&quot;/>&#xa;            &lt;/Geschaeftsfall>&#xa;            &lt;Anzahl_der_Dokumente>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/ANZAHL_VERSUCHE&quot;/>&#xa;            &lt;/Anzahl_der_Dokumente>&#xa;        &lt;/tns2:GetDataWFCaseIDResponse>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_WFCaseID&quot;/>&#xa;    &lt;xsl:template name=&quot;GetDataWFCaseIDOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:GetDataWFCaseIDResponse>&#xa;            &lt;CaseID>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID&quot;/>&#xa;            &lt;/CaseID>&#xa;            &lt;AHV-Nummer>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER&quot;/>&#xa;            &lt;/AHV-Nummer>&#xa;            &lt;Dokumenten-Art>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART&quot;/>&#xa;            &lt;/Dokumenten-Art>&#xa;            &lt;Geschaeftsfall>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL&quot;/>&#xa;            &lt;/Geschaeftsfall>&#xa;            &lt;DossierID>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOSSIERID&quot;/>&#xa;            &lt;/DossierID>&#xa;            &lt;Anzahl_der_Dokumente>&#xa;                &lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/ANZAHL_VERSUCHE&quot;/>&#xa;            &lt;/Anzahl_der_Dokumente>&#xa;        &lt;/tns2:GetDataWFCaseIDResponse>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_WFCaseID"/&gt;&lt;xsl:template name="GetDataWFCaseIDOut-input" match="/"&gt;&lt;tns:GetDataWFCaseIDResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:GetDataWFCaseIDResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/ANZAHL_VERSUCHE"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/tns2:GetDataWFCaseIDResponse&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:GetDataWFCaseIDResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_WFCaseID"/&gt;&lt;xsl:template name="GetDataWFCaseIDOut-input" match="/"&gt;&lt;tns:GetDataWFCaseIDResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:GetDataWFCaseIDResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;DossierID&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/DOSSIERID"/&gt;&lt;/DossierID&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="$JDBCQuery_WFCaseID/Record[1]/ANZAHL_VERSUCHE"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/tns2:GetDataWFCaseIDResponse&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:GetDataWFCaseIDResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
                                     <bpws:target linkName="JDBCQueryToGetDataWFCaseIDOut"/>
                                 </bpws:targets>
@@ -3493,7 +3586,7 @@
                                     interpretEmptyStringAsNull="true"
                                     maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT WF_CASE_ID, AHV_NUMMER, PARTNER_ID, DOKUMENTENART, GESCHAEFTSFALL,&#xa;  ANZAHL_VERSUCHE, STARTED_IN_BPM,ANZAHL_DOKUMENTE&#xa;  FROM WFDATA_DBA.WFDATA_BPM&#xa;  WHERE WF_CASE_ID = ?&#xa;"
+                                    sqlStatement="SELECT *&#xa;  FROM WFDATA_DBA.WFDATA_BPM&#xa;  WHERE WF_CASE_ID = ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
 
                                     <PreparedParameters
@@ -3504,10 +3597,6 @@
                                     dataType="12" typeName="VARCHAR"/>
                                     <columnMetadata
                                     columnName="AHV_NUMMER"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="VARCHAR"/>
-                                    <columnMetadata
-                                    columnName="PARTNER_ID"
                                     dataType="12"
                                     status="OptionalElement" typeName="VARCHAR"/>
                                     <columnMetadata
@@ -3528,6 +3617,10 @@
                                     columnName="ANZAHL_DOKUMENTE"
                                     dataType="4"
                                     status="OptionalElement" typeName="INTEGER"/>
+                                    <columnMetadata
+                                    columnName="DOSSIERID"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="VARCHAR"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
@@ -3611,10 +3704,10 @@
                                 tibex:xpdlId="aa2faf1f-4302-4275-9442-cd96fd7cce08" variable="SearchDataOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_Like&quot;/>&#xa;    &lt;xsl:template name=&quot;SearchDataOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:SearchDataResponses>&#xa;            &lt;xsl:for-each select=&quot;$JDBCQuery_Like/Record&quot;>&#xa;                &lt;SearchDataResponse>&#xa;                    &lt;CaseID>&#xa;                        &lt;xsl:value-of select=&quot;WF_CASE_ID&quot;/>&#xa;                    &lt;/CaseID>&#xa;                    &lt;AHV-Nummer>&#xa;                        &lt;xsl:value-of select=&quot;AHV_NUMMER&quot;/>&#xa;                    &lt;/AHV-Nummer>&#xa;                    &lt;Dokumenten-Art>&#xa;                        &lt;xsl:value-of select=&quot;DOKUMENTENART&quot;/>&#xa;                    &lt;/Dokumenten-Art>&#xa;                    &lt;Geschaeftsfall>&#xa;                        &lt;xsl:value-of select=&quot;GESCHAEFTSFALL&quot;/>&#xa;                    &lt;/Geschaeftsfall>&#xa;                    &lt;xsl:choose>&#xa;                        &lt;xsl:when test=&quot;string-length(normalize-space(string(ANZAHL_DOKUMENTE)))>0&quot;>&#xa;                            &lt;Anzahl_der_Dokumente>&#xa;                                &lt;xsl:value-of select=&quot;ANZAHL_DOKUMENTE&quot;/>&#xa;                            &lt;/Anzahl_der_Dokumente>&#xa;                        &lt;/xsl:when>&#xa;                        &lt;xsl:otherwise>&#xa;                            &lt;Anzahl_der_Dokumente>&#xa;                                &lt;xsl:value-of select=&quot;0&quot;/>&#xa;                            &lt;/Anzahl_der_Dokumente>&#xa;                        &lt;/xsl:otherwise>&#xa;                    &lt;/xsl:choose>&#xa;                &lt;/SearchDataResponse>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns2:SearchDataResponses>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://com.tibco.poc.test.bw.saveDataCase&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JDBCQuery_Like&quot;/>&#xa;    &lt;xsl:template name=&quot;SearchDataOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:SearchDataResponses>&#xa;            &lt;xsl:for-each select=&quot;$JDBCQuery_Like/Record&quot;>&#xa;                &lt;SearchDataResponse>&#xa;                    &lt;CaseID>&#xa;                        &lt;xsl:value-of select=&quot;WF_CASE_ID&quot;/>&#xa;                    &lt;/CaseID>&#xa;                    &lt;AHV-Nummer>&#xa;                        &lt;xsl:value-of select=&quot;AHV_NUMMER&quot;/>&#xa;                    &lt;/AHV-Nummer>&#xa;                    &lt;Dokumenten-Art>&#xa;                        &lt;xsl:value-of select=&quot;DOKUMENTENART&quot;/>&#xa;                    &lt;/Dokumenten-Art>&#xa;                    &lt;DossierID>&#xa;                        &lt;xsl:value-of select=&quot;DOSSIERID&quot;/>&#xa;                    &lt;/DossierID>&#xa;                    &lt;Geschaeftsfall>&#xa;                        &lt;xsl:value-of select=&quot;GESCHAEFTSFALL&quot;/>&#xa;                    &lt;/Geschaeftsfall>&#xa;                    &lt;xsl:choose>&#xa;                        &lt;xsl:when test=&quot;string-length(normalize-space(string(ANZAHL_DOKUMENTE)))>0&quot;>&#xa;                            &lt;Anzahl_der_Dokumente>&#xa;                                &lt;xsl:value-of select=&quot;ANZAHL_DOKUMENTE&quot;/>&#xa;                            &lt;/Anzahl_der_Dokumente>&#xa;                        &lt;/xsl:when>&#xa;                        &lt;xsl:otherwise>&#xa;                            &lt;Anzahl_der_Dokumente>&#xa;                                &lt;xsl:value-of select=&quot;0&quot;/>&#xa;                            &lt;/Anzahl_der_Dokumente>&#xa;                        &lt;/xsl:otherwise>&#xa;                    &lt;/xsl:choose>&#xa;                &lt;/SearchDataResponse>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns2:SearchDataResponses>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_Like"/&gt;&lt;xsl:template name="SearchDataOut-input" match="/"&gt;&lt;tns:SearchDataResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:SearchDataResponses&gt;&lt;xsl:for-each select="$JDBCQuery_Like/Record"&gt;&lt;SearchDataResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;xsl:choose&gt;&lt;xsl:when test="string-length(normalize-space(string(ANZAHL_DOKUMENTE)))&gt;0"&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="ANZAHL_DOKUMENTE"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/xsl:when&gt;&lt;xsl:otherwise&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="0"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/xsl:otherwise&gt;&lt;/xsl:choose&gt;&lt;/SearchDataResponse&gt;&lt;/xsl:for-each&gt;&lt;/tns2:SearchDataResponses&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:SearchDataResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://com.tibco.poc.test.bw.saveDataCase" xmlns:tns2="http://com.tibco.poc.test.bw.saveDataCaseXSD" version="2.0"&gt;&lt;xsl:param name="JDBCQuery_Like"/&gt;&lt;xsl:template name="SearchDataOut-input" match="/"&gt;&lt;tns:SearchDataResponse&gt;&lt;GetDataOutputParameters&gt;&lt;tns2:SearchDataResponses&gt;&lt;xsl:for-each select="$JDBCQuery_Like/Record"&gt;&lt;SearchDataResponse&gt;&lt;CaseID&gt;&lt;xsl:value-of select="WF_CASE_ID"/&gt;&lt;/CaseID&gt;&lt;AHV-Nummer&gt;&lt;xsl:value-of select="AHV_NUMMER"/&gt;&lt;/AHV-Nummer&gt;&lt;Dokumenten-Art&gt;&lt;xsl:value-of select="DOKUMENTENART"/&gt;&lt;/Dokumenten-Art&gt;&lt;DossierID&gt;&lt;xsl:value-of select="DOSSIERID"/&gt;&lt;/DossierID&gt;&lt;Geschaeftsfall&gt;&lt;xsl:value-of select="GESCHAEFTSFALL"/&gt;&lt;/Geschaeftsfall&gt;&lt;xsl:choose&gt;&lt;xsl:when test="string-length(normalize-space(string(ANZAHL_DOKUMENTE)))&gt;0"&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="ANZAHL_DOKUMENTE"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/xsl:when&gt;&lt;xsl:otherwise&gt;&lt;Anzahl_der_Dokumente&gt;&lt;xsl:value-of select="0"/&gt;&lt;/Anzahl_der_Dokumente&gt;&lt;/xsl:otherwise&gt;&lt;/xsl:choose&gt;&lt;/SearchDataResponse&gt;&lt;/xsl:for-each&gt;&lt;/tns2:SearchDataResponses&gt;&lt;/GetDataOutputParameters&gt;&lt;/tns:SearchDataResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
                                     <bpws:target linkName="Copy_1_JDBCQueryToSearchDataOut"/>
                                 </bpws:targets>
@@ -3692,7 +3785,7 @@
                                     <value
                                     maxRows="1000"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT  WF_CASE_ID,AHV_NUMMER, PARTNER_ID, DOKUMENTENART, GESCHAEFTSFALL, ANZAHL_VERSUCHE, STARTED_IN_BPM, ANZAHL_DOKUMENTE&#xa;FROM WFDATA_DBA.WFDATA_BPM Where AHV_NUMMER like ? OR DOKUMENTENART like ? OR GESCHAEFTSFALL like ?&#xa;"
+                                    sqlStatement="SELECT  * FROM WFDATA_DBA.WFDATA_BPM Where AHV_NUMMER like ? OR DOKUMENTENART like ? OR GESCHAEFTSFALL like ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
 
                                     <PreparedParameters
@@ -3714,10 +3807,6 @@
                                     dataType="12"
                                     status="OptionalElement" typeName="VARCHAR"/>
                                     <columnMetadata
-                                    columnName="PARTNER_ID"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="VARCHAR"/>
-                                    <columnMetadata
                                     columnName="DOKUMENTENART"
                                     dataType="12"
                                     status="OptionalElement" typeName="VARCHAR"/>
@@ -3735,6 +3824,10 @@
                                     columnName="ANZAHL_DOKUMENTE"
                                     dataType="4"
                                     status="OptionalElement" typeName="INTEGER"/>
+                                    <columnMetadata
+                                    columnName="DOSSIERID"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="VARCHAR"/>
                                     </value>
                                     </properties>
                                     </activityConfig>

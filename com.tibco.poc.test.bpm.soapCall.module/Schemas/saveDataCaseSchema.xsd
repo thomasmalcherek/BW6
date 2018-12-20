@@ -7,7 +7,7 @@
 			<sequence>
 				<element name="AHV-Nummer" type="string" />
 				<element name="Dokumenten-Art" type="string" />
-				<element name="Geschaeftsfall" type="string" />
+				<element name="DossierID" type="string" />
 				<element name="Anzahl_der_Dokumente" type="integer" />
 			</sequence>
 		</complexType>
@@ -16,6 +16,21 @@
 		<complexType>
 			<sequence>
 				<element maxOccurs="1" minOccurs="1" name="CaseID" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="GetGeschaeftsfallPerDokumentenArtRequest">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="Dokumenten-Art" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="GetGeschaeftsfallPerDokumentenArtResponse">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="Geschaeftsfall" type="string" />
 			</sequence>
 		</complexType>
 	</element>
@@ -53,6 +68,7 @@
 				<element name="AHV-Nummer" type="string" />
 				<element name="Dokumenten-Art" type="string" />
 				<element name="Geschaeftsfall" type="string" />
+				<element name="DossierID" type="string" />
 				<element name="Anzahl_der_Dokumente" type="integer" />
 			</sequence>
 		</complexType>
@@ -68,6 +84,7 @@
 							<element name="CaseID" type="string" />
 							<element name="AHV-Nummer" type="string" />
 							<element name="Dokumenten-Art" type="string" />
+							<element name="DossierID" type="string" />
 							<element name="Geschaeftsfall" type="string" />
 							<element name="Anzahl_der_Dokumente" type="integer" />
 						</sequence>
