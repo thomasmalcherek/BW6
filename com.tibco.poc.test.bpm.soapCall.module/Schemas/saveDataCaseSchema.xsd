@@ -19,18 +19,20 @@
 			</sequence>
 		</complexType>
 	</element>
-	
+
 	<element name="GetGeschaeftsfallPerDokumentenArtRequest">
 		<complexType>
 			<sequence>
-				<element maxOccurs="1" minOccurs="1" name="Dokumenten-Art" type="string" />
+				<element maxOccurs="1" minOccurs="1" name="Dokumenten-Art"
+					type="string" />
 			</sequence>
 		</complexType>
 	</element>
 	<element name="GetGeschaeftsfallPerDokumentenArtResponse">
 		<complexType>
 			<sequence>
-				<element maxOccurs="1" minOccurs="1" name="Geschaeftsfall" type="string" />
+				<element maxOccurs="1" minOccurs="1" name="Geschaeftsfall"
+					type="string" />
 			</sequence>
 		</complexType>
 	</element>
@@ -104,5 +106,19 @@
 		</complexType>
 	</element>
 
+	<element name="WorkPerformerRequest">
+		<complexType>
+			<sequence>
+				<element name="WorkPerformer" type="string" />
+			</sequence>
+		</complexType>
+	</element>
 
+	<element name="WorkPerformerResponse">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="ResponseCode" type="boolean" />
+			</sequence>
+		</complexType>
+	</element>
 </schema>
