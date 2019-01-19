@@ -1,8 +1,8 @@
-com.tibco.bw.core.design.debug.ui.launch.existingApplications=com.tibco.poc.test.bpm.soapCall/
-com.tibco.bw.core.design.debug.ui.launch.processesArg=com.tibco.poc.test.bpm.soapCall\=com.tibco.poc.test.bpm.soapcall.module.saveDataCase/
-com.tibco.bw.core.design.debug.ui.launch.selectedApplications=com.tibco.poc.test.bpm.soapCall/
-com.tibco.bw.core.design.debug.ui.launch.selectedModules=com.tibco.poc.test.bpm.soapCall.module/
-com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=com.tibco.poc.test.bpm.soapCall.module\=com.tibco.poc.test.bpm.soapcall.module.saveDataCase/
+com.tibco.bw.core.design.debug.ui.launch.existingApplications=com.tibco.poc.test.bpm.soapCall/StartWorkflow.application/
+com.tibco.bw.core.design.debug.ui.launch.processesArg=com.tibco.poc.test.bpm.soapCall\=/StartWorkflow.application\=startworkflow.StartIVSLWorkflow,startworkflow.StartWF/
+com.tibco.bw.core.design.debug.ui.launch.selectedApplications=StartWorkflow.application/com.tibco.poc.test.bpm.soapCall/
+com.tibco.bw.core.design.debug.ui.launch.selectedModules=StartWorkflow/com.tibco.poc.test.bpm.soapCall.module/
+com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=StartWorkflow\=startworkflow.StartIVSLWorkflow,startworkflow.StartWF/
 com.tibco.bw.core.design.debug.ui.view.BWProcessInstanceView+com.tibco.bw.core.design.debug.ui.actions.BWShowInstanceSatckByTempleteAction=true
 eclipse.preferences.version=1
 org.eclipse.debug.ui.DebugView+com.tibco.bw.core.design.debug.ui.actions.BWShowStackByTempleteAction=true

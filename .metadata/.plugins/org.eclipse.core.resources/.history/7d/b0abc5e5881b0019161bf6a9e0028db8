@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/startWorkFlow" xmlns:tns="http://www.example.org/startWorkFlow" elementFormDefault="qualified">
+
+	<complexType name="Dokument">
+		<sequence>
+			<element form="unqualified" name="dokumentID">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="documentNumber" type="int"/>
+			<element form="unqualified" name="documentType">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="22"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="documentSecurity" type="int"/>
+			<element form="unqualified" minOccurs="0" name="documentDateOfReceipt" type="dateTime"/>
+			<element form="unqualified" minOccurs="0" name="documentScanDate" type="dateTime"/>
+			<element form="unqualified" minOccurs="0" name="stackName">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="effortType">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="keyword">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="kurztext">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="kommentar">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="anmeldenummer">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="formularempfnger">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="Geschaeftsfall">
+		<sequence>
+			<element form="unqualified" name="PKID">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="processNumber" type="int"/>
+			<element form="unqualified" minOccurs="0" name="urgent" type="boolean"/>
+			<element form="unqualified" minOccurs="0" name="processUser">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="workflowDate" type="dateTime"/>
+			<element form="unqualified" minOccurs="0" name="messagePK">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="senderName">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="ownerName">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="workflowState">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="handlingReason">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="feedback">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="typNummer" type="int"/>
+			<element form="unqualified" minOccurs="0" name="typBezeichnung">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="Mitglied">
+		<sequence>
+			<element form="unqualified" name="MGPartnerID">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="accountNumber">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="22"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="companyID">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="22"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="name">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="additionalName">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="22"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="foundingDate">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="anmeldenummer">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="22"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="Versicherter">
+		<sequence>
+			<element form="unqualified" name="VSPartnerID">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="secureNumber">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" name="personID">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="lastName">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="firstName">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="22"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="title">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="degree">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="gender">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element form="unqualified" minOccurs="0" name="birthDate" type="date"/>
+			<element form="unqualified" minOccurs="0" name="sprache">
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="50"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	
+		 <simpleType name="string_50">
+                <restriction base="string">
+                    <maxLength value="50"/>
+                </restriction>
+            </simpleType>
+			
+
+
+	<element name="StartWorkFlowRequest">
+		<complexType>
+			<sequence>
+				 <element maxOccurs="1" minOccurs="0" name="Dokument" type="tns:Dokument"/>
+        <element maxOccurs="1" minOccurs="0" name="Geschaeftsfall" type="tns:Geschaeftsfall"/>
+        <element maxOccurs="1" minOccurs="0" name="Mitglied" type="tns:Mitglied"/>
+        <element maxOccurs="1" minOccurs="0" name="Versicherte" type="tns:Versicherter"/>
+        <element maxOccurs="1" minOccurs="1" name="WorkflowID" type="tns:string_50"/>
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="StartWorkFlowResponse">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" name="ProcessID" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+
+
+</schema>
+

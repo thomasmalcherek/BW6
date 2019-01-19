@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:BWreceiveRequestFromBPM="http://www.tibco.com/BWreceiveRequestFromBPM/" xmlns:IVSachleistungenpruefenGeschaeftsfallStart="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw/IVSachleistungenpruefenGeschaeftsfallStart" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:_q_32sAHvEemexrh4L8sbdw="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:com.tibco.poc.test.bw.pv.PVServiceXSD="http://com.tibco.poc.test.bw.pv.PVServiceXSD" xmlns:com.tibco.poc.test.bw.pv.getPVData="http://com.tibco.poc.test.bw.pv.getPVData" xmlns:com.tibco.poc.test.bw.saveDataCase="http://com.tibco.poc.test.bw.saveDataCase" xmlns:com.tibco.poc.test.bw.saveDataCaseXSD="http://com.tibco.poc.test.bw.saveDataCaseXSD" xmlns:comigsbom="http://example.com/comigsbom" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_dA9V4OmzEeiG6re6qGmOwQ" targetNamespace="http://tns.tibco.com/bw/composite/com.tibco.poc.test.bpm.soapCall.module" name="com.tibco.poc.test.bpm.soapCall.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_MqChAhQUEem1wobiEBjdwg" name="saveDataCase_JMS" promote="ComponentsaveDataCase/saveDataCase">
+    <sca:interface.wsdl xmi:id="_MqChBhQUEem1wobiEBjdwg" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_N4cN0BQUEem1wobiEBjdwg" name="SOAPServiceBinding_JMS" targetNamespace="http://com.tibco.poc.test.bw.saveDataCase" portTypeQName="com.tibco.poc.test.bw.saveDataCase:saveDataCase" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+      <bindingType xmi:id="_N4cN0RQUEem1wobiEBjdwg"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_TMZawBQUEem1wobiEBjdwg" jmsResource="com.tibco.poc.test.bpm.soapcall.module.JMSConnectionResource" messageType="Text"/>
+      <operationConfiguration xmi:id="_N4cN0hQUEem1wobiEBjdwg" operationName="CreateCaseID" action="CreateCaseID" actionNeeded="true">
+        <bindingType xmi:id="_N4cN0xQUEem1wobiEBjdwg"/>
+        <messageConfiguration xmi:id="_N4cN1BQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN1RQUEem1wobiEBjdwg" partName="InputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_N4cN1hQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN1xQUEem1wobiEBjdwg" partName="OutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_N4cN8BQUEem1wobiEBjdwg">
+          <inputMapping xmi:id="_N4cN8RQUEem1wobiEBjdwg"/>
+          <outputMapping xmi:id="_N4cN8hQUEem1wobiEBjdwg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_N4cN2BQUEem1wobiEBjdwg" operationName="CreateCaseIDFromBPM" action="CreateCaseIDFromBPM" actionNeeded="true">
+        <bindingType xmi:id="_N4cN2RQUEem1wobiEBjdwg"/>
+        <messageConfiguration xmi:id="_N4cN2hQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequestFromBPM" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN2xQUEem1wobiEBjdwg" partName="InputParametersFromBPM" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDRequestFromBPM"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_N4cN3BQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDResponseFromBPM" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN3RQUEem1wobiEBjdwg" partName="OutputParametersFromBPM" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDResponseFromBPM"/>
+        </messageConfiguration>
+        <context xmi:id="_N4cN8xQUEem1wobiEBjdwg">
+          <inputMapping xmi:id="_N4cN9BQUEem1wobiEBjdwg"/>
+          <outputMapping xmi:id="_N4cN9RQUEem1wobiEBjdwg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_N4cN3hQUEem1wobiEBjdwg" operationName="GetDataWFCaseID" action="GetDataWFCaseID" actionNeeded="true">
+        <bindingType xmi:id="_N4cN3xQUEem1wobiEBjdwg"/>
+        <messageConfiguration xmi:id="_N4cN4BQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:GetDataWFCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN4RQUEem1wobiEBjdwg" partName="GetDataPInputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:GetDataRequestFromCaseID"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_N4cN4hQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:GetDataWFCaseIDResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN4xQUEem1wobiEBjdwg" partName="GetDataOutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:GetDataWFCaseIDResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_N4cN9hQUEem1wobiEBjdwg">
+          <inputMapping xmi:id="_N4cN9xQUEem1wobiEBjdwg"/>
+          <outputMapping xmi:id="_N4cN-BQUEem1wobiEBjdwg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_N4cN5BQUEem1wobiEBjdwg" operationName="SearchData" action="SearchData" actionNeeded="true">
+        <bindingType xmi:id="_N4cN5RQUEem1wobiEBjdwg"/>
+        <messageConfiguration xmi:id="_N4cN5hQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:SearchDataRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN5xQUEem1wobiEBjdwg" partName="SearchDataInputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:SearchDataRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_N4cN6BQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:SearchDataResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN6RQUEem1wobiEBjdwg" partName="SearchDataOutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:SearchDataResponses"/>
+        </messageConfiguration>
+        <context xmi:id="_N4cN-RQUEem1wobiEBjdwg">
+          <inputMapping xmi:id="_N4cN-hQUEem1wobiEBjdwg"/>
+          <outputMapping xmi:id="_N4cN-xQUEem1wobiEBjdwg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_N4cN6hQUEem1wobiEBjdwg" operationName="WorkPerformer" action="WorkPerformer" actionNeeded="true">
+        <bindingType xmi:id="_N4cN6xQUEem1wobiEBjdwg"/>
+        <messageConfiguration xmi:id="_N4cN7BQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:WorkPerformerRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN7RQUEem1wobiEBjdwg" partName="WorkPerformerInputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:WorkPerformerRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_N4cN7hQUEem1wobiEBjdwg" messageQName="com.tibco.poc.test.bw.saveDataCase:WorkPerformerResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_N4cN7xQUEem1wobiEBjdwg" partName="WorkPerformerOutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:WorkPerformerResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_N4cN_BQUEem1wobiEBjdwg">
+          <inputMapping xmi:id="_N4cN_RQUEem1wobiEBjdwg"/>
+          <outputMapping xmi:id="_N4cN_hQUEem1wobiEBjdwg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_N4cN_xQUEem1wobiEBjdwg" bindingName="SOAPServiceBinding_JMS">
+      <sca:property xmi:id="_USuwsBQUEem1wobiEBjdwg" name="destination" scaext:simpleValue="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata"/>
+    </scact:bindingAdjunct>
+  </sca:service>
+  <sca:service xmi:id="_OPTDohlvEemugKVX_ngkhA" name="saveDataCase_HTTP" promote="ComponentsaveDataCase1/saveDataCase">
+    <sca:interface.wsdl xmi:id="_OPdbshlvEemugKVX_ngkhA" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_OPl-kRlvEemugKVX_ngkhA" name="SOAPServiceBinding_HTTP" targetNamespace="http://com.tibco.poc.test.bw.saveDataCase" portTypeQName="com.tibco.poc.test.bw.saveDataCase:saveDataCase" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+      <bindingType xmi:id="_OP45gBlvEemugKVX_ngkhA"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_H-DSkBlwEemugKVX_ngkhA" endpointURI="/saveDataCase/" httpConnector="com.tibco.poc.test.bpm.soapcall.module.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_OP45gRlvEemugKVX_ngkhA" operationName="CreateCaseID" action="CreateCaseID" actionNeeded="true">
+        <bindingType xmi:id="_OP45ghlvEemugKVX_ngkhA"/>
+        <messageConfiguration xmi:id="_OP45gxlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45hBlvEemugKVX_ngkhA" partName="InputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_OP45hRlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45hhlvEemugKVX_ngkhA" partName="OutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_OP45nxlvEemugKVX_ngkhA">
+          <inputMapping xmi:id="_OP45oBlvEemugKVX_ngkhA"/>
+          <outputMapping xmi:id="_OP45oRlvEemugKVX_ngkhA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_OP45hxlvEemugKVX_ngkhA" operationName="CreateCaseIDFromBPM" action="CreateCaseIDFromBPM" actionNeeded="true">
+        <bindingType xmi:id="_OP45iBlvEemugKVX_ngkhA"/>
+        <messageConfiguration xmi:id="_OP45iRlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDRequestFromBPM" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45ihlvEemugKVX_ngkhA" partName="InputParametersFromBPM" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDRequestFromBPM"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_OP45ixlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:CreateCaseIDResponseFromBPM" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45jBlvEemugKVX_ngkhA" partName="OutputParametersFromBPM" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:CreateCaseIDResponseFromBPM"/>
+        </messageConfiguration>
+        <context xmi:id="_OP45ohlvEemugKVX_ngkhA">
+          <inputMapping xmi:id="_OP45oxlvEemugKVX_ngkhA"/>
+          <outputMapping xmi:id="_OP45pBlvEemugKVX_ngkhA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_OP45jRlvEemugKVX_ngkhA" operationName="GetDataWFCaseID" action="GetDataWFCaseID" actionNeeded="true">
+        <bindingType xmi:id="_OP45jhlvEemugKVX_ngkhA"/>
+        <messageConfiguration xmi:id="_OP45jxlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:GetDataWFCaseIDRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45kBlvEemugKVX_ngkhA" partName="GetDataPInputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:GetDataRequestFromCaseID"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_OP45kRlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:GetDataWFCaseIDResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45khlvEemugKVX_ngkhA" partName="GetDataOutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:GetDataWFCaseIDResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_OP45pRlvEemugKVX_ngkhA">
+          <inputMapping xmi:id="_OP45phlvEemugKVX_ngkhA"/>
+          <outputMapping xmi:id="_OP45pxlvEemugKVX_ngkhA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_OP45kxlvEemugKVX_ngkhA" operationName="SearchData" action="SearchData" actionNeeded="true">
+        <bindingType xmi:id="_OP45lBlvEemugKVX_ngkhA"/>
+        <messageConfiguration xmi:id="_OP45lRlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:SearchDataRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45lhlvEemugKVX_ngkhA" partName="SearchDataInputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:SearchDataRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_OP45lxlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:SearchDataResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45mBlvEemugKVX_ngkhA" partName="SearchDataOutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:SearchDataResponses"/>
+        </messageConfiguration>
+        <context xmi:id="_OP45qBlvEemugKVX_ngkhA">
+          <inputMapping xmi:id="_OP45qRlvEemugKVX_ngkhA"/>
+          <outputMapping xmi:id="_OP45qhlvEemugKVX_ngkhA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_OP45mRlvEemugKVX_ngkhA" operationName="WorkPerformer" action="WorkPerformer" actionNeeded="true">
+        <bindingType xmi:id="_OP45mhlvEemugKVX_ngkhA"/>
+        <messageConfiguration xmi:id="_OP45mxlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:WorkPerformerRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45nBlvEemugKVX_ngkhA" partName="WorkPerformerInputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:WorkPerformerRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_OP45nRlvEemugKVX_ngkhA" messageQName="com.tibco.poc.test.bw.saveDataCase:WorkPerformerResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/saveDataCase.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_OP45nhlvEemugKVX_ngkhA" partName="WorkPerformerOutputParameters" partElementName="com.tibco.poc.test.bw.saveDataCaseXSD:WorkPerformerResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_OP45qxlvEemugKVX_ngkhA">
+          <inputMapping xmi:id="_OP45rBlvEemugKVX_ngkhA"/>
+          <outputMapping xmi:id="_OP45rRlvEemugKVX_ngkhA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_OP45rhlvEemugKVX_ngkhA" bindingName="SOAPServiceBinding_HTTP"/>
+  </sca:service>
+  <sca:service xmi:id="_7B_m0BmmEemTqrxdvWv9zg" name="GetAddtionalData" promote="ComponentGetAddtionalData/GetAddtionalData">
+    <sca:interface.wsdl xmi:id="_7B_m1BmmEemTqrxdvWv9zg" interface="http://com.tibco.poc.test.bw.pv.getPVData#wsdl.interface(GetAddtionalData)" scaext:wsdlLocation="../Service%20Descriptors/ProcessService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_7CJX0BmmEemTqrxdvWv9zg" name="SOAPServiceBinding" targetNamespace="http://com.tibco.poc.test.bw.pv.getPVData" portTypeQName="com.tibco.poc.test.bw.pv.getPVData:GetAddtionalData" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/ProcessService.wsdl">
+      <bindingType xmi:id="_7CJX0RmmEemTqrxdvWv9zg"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_AcSvgBmrEemwL6bRDuvxIg" endpointURI="/getPVData/" httpConnector="com.tibco.poc.test.bpm.soapcall.module.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_7CJX0hmmEemTqrxdvWv9zg" operationName="GetPVData" action="GetPVData" actionNeeded="true">
+        <bindingType xmi:id="_7CJX0xmmEemTqrxdvWv9zg"/>
+        <messageConfiguration xmi:id="_7CJX1BmmEemTqrxdvWv9zg" messageQName="com.tibco.poc.test.bw.pv.getPVData:GetDataFromPVRequest" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/ProcessService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_7CJX1RmmEemTqrxdvWv9zg" partName="Inputparameter" partElementName="com.tibco.poc.test.bw.pv.PVServiceXSD:SearchPVRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_7CJX1hmmEemTqrxdvWv9zg" messageQName="com.tibco.poc.test.bw.pv.getPVData:GetDataFromPVResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/com.tibco.poc.test.bpm.soapCall.module/Service%20Descriptors/ProcessService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_7CJX1xmmEemTqrxdvWv9zg" partName="Outputparameter" partElementName="com.tibco.poc.test.bw.pv.PVServiceXSD:SearchPVResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_7CJX2BmmEemTqrxdvWv9zg">
+          <inputMapping xmi:id="_7CJX2RmmEemTqrxdvWv9zg"/>
+          <outputMapping xmi:id="_7CJX2hmmEemTqrxdvWv9zg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_7CJX2xmmEemTqrxdvWv9zg" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_dcieoOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dcqacOmzEeiG6re6qGmOwQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcemzEeiG6re6qGmOwQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc0LcumzEeiG6re6qGmOwQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cOmzEeiG6re6qGmOwQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cemzEeiG6re6qGmOwQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dc98cumzEeiG6re6qGmOwQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ddHGYOmzEeiG6re6qGmOwQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_2tqdQOm2EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/NamingProviderUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_J9l10Om3EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ol1Z8Oy2EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/User" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_u902wOy2EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/Password" type="property:password" scaext:simpleValue="#!Je6Xs35U3MTX7FDoQcHV9w==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YHVKsOy3EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/DB_URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_sqXNABlxEemugKVX_ngkhA" name="/HTTP_BW6/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_yMWO4BlxEemugKVX_ngkhA" name="/HTTP_BW6/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_MpvmEBQUEem1wobiEBjdwg" name="ComponentsaveDataCase" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_MpvmERQUEem1wobiEBjdwg" processName="com.tibco.poc.test.bpm.soapcall.module.saveDataCase_JMS"/>
+    <sca:service xmi:id="_MqChABQUEem1wobiEBjdwg" name="saveDataCase">
+      <sca:interface.wsdl xmi:id="_MqChARQUEem1wobiEBjdwg" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_OPJ5sBlvEemugKVX_ngkhA" name="ComponentsaveDataCase1" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_OPJ5sRlvEemugKVX_ngkhA" processName="com.tibco.poc.test.bpm.soapcall.module.saveDataCase_HTTP"/>
+    <sca:service xmi:id="_OPTDoBlvEemugKVX_ngkhA" name="saveDataCase">
+      <sca:interface.wsdl xmi:id="_OPTDoRlvEemugKVX_ngkhA" interface="http://com.tibco.poc.test.bw.saveDataCase#wsdl.interface(saveDataCase)" scaext:wsdlLocation="../Service%20Descriptors/saveDataCase.wsdl"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_7B3rABmmEemTqrxdvWv9zg" name="ComponentGetAddtionalData" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7B3rARmmEemTqrxdvWv9zg" processName="com.tibco.poc.test.pv.GetAddtionalData"/>
+    <sca:service xmi:id="_7B3rAhmmEemTqrxdvWv9zg" name="GetAddtionalData">
+      <sca:interface.wsdl xmi:id="_7B3rAxmmEemTqrxdvWv9zg" interface="http://com.tibco.poc.test.bw.pv.getPVData#wsdl.interface(GetAddtionalData)" scaext:wsdlLocation="../Service%20Descriptors/ProcessService.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

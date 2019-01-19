@@ -182,7 +182,9 @@
                 <complexType>
                     <sequence>
                         <element maxOccurs="1" minOccurs="1"
-                            name="IN_DOKUMENTENART" nillable="true" type="string"/>
+                            name="Dokumentenart_main" nillable="true" type="string"/>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="Dokumentenart_spec" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
@@ -202,9 +204,18 @@
                         <element maxOccurs="unbounded" minOccurs="0" name="Record">
                             <complexType>
                                 <sequence>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="ID" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="GESCHAEFTSFALL"
                                     nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0"
+                                    name="DOKUMENTENART"
+                                    nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="DOKUMENTENART_MAIN" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="DOKUMENTENART_SPEC" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -588,7 +599,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery_WFCaseID&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns2:GetGeschaeftsfallPerDokumentenArtResponse>&lt;Geschaeftsfall>&lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL&quot;/>&lt;/Geschaeftsfall>&lt;/tns2:GetGeschaeftsfallPerDokumentenArtResponse>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery_WFCaseID&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns2:GetGeschaeftsfallPerDokumentenArtResponse>&lt;GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/GESCHAEFTSFALL&quot;/>&lt;/GESCHAEFTSFALL>&lt;DOKUMENTENART>&lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART&quot;/>&lt;/DOKUMENTENART>&lt;DOKUMENTENART_MAIN>&lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART_MAIN&quot;/>&lt;/DOKUMENTENART_MAIN>&lt;DOKUMENTENART_SPEC>&lt;xsl:value-of select=&quot;$JDBCQuery_WFCaseID/Record[1]/DOKUMENTENART_SPEC&quot;/>&lt;/DOKUMENTENART_SPEC>&lt;/tns2:GetGeschaeftsfallPerDokumentenArtResponse>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -620,7 +631,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:tns3=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+91a9c744-33cd-4b42-aeb7-60e38a9807db+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCQuery_WFCaseID-input&quot; match=&quot;/&quot;>&lt;tns3:jdbcQueryActivityInput>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;upper-case($Start/Dokumenten-Art)&quot;/>&lt;/IN_DOKUMENTENART>&lt;/tns3:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+91a9c744-33cd-4b42-aeb7-60e38a9807db+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCQuery_WFCaseID-input&quot; match=&quot;/&quot;>&lt;tns3:jdbcQueryActivityInput>&lt;Dokumentenart_main>&lt;xsl:value-of select=&quot;substring-before($Start/Dokumenten-Art,&amp;quot;.&amp;quot;)&quot;/>&lt;/Dokumentenart_main>&lt;Dokumentenart_spec>&lt;xsl:value-of select=&quot;substring-after($Start/Dokumenten-Art,&amp;quot;.&amp;quot;)&quot;/>&lt;/Dokumentenart_spec>&lt;/tns3:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -635,15 +646,30 @@
                                     interpretEmptyStringAsNull="true"
                                     maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT GESCHAEFTSFALL&#xa;  FROM WFDATA_DBA.WFDATA_GS_DOKUART&#xa;  WHERE DOKUMENTENART = ?&#xa;"
+                                    sqlStatement="SELECT *&#xa;  FROM WFDATA_DBA.WFDATA_GS_DOKUART&#xa;  WHERE upper(Dokumentenart_main) = upper(?) and upper(Dokumentenart_spec) = upper(?)&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters
                                     DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_DOKUMENTENART"/>
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="Dokumentenart_main"/>
+                                    <PreparedParameters
+                                    DataType="12"
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="Dokumentenart_spec"/>
+                                    <columnMetadata columnName="ID"
+                                    dataType="12" typeName="VARCHAR"/>
                                     <columnMetadata
                                     columnName="GESCHAEFTSFALL"
                                     dataType="12"
                                     status="OptionalElement" typeName="VARCHAR"/>
+                                    <columnMetadata
+                                    columnName="DOKUMENTENART"
+                                    dataType="12"
+                                    status="OptionalElement" typeName="VARCHAR"/>
+                                    <columnMetadata
+                                    columnName="DOKUMENTENART_MAIN"
+                                    dataType="12" typeName="VARCHAR"/>
+                                    <columnMetadata
+                                    columnName="DOKUMENTENART_SPEC"
+                                    dataType="12" typeName="VARCHAR"/>
                                     </value>
                                 </properties>
                             </activityConfig>

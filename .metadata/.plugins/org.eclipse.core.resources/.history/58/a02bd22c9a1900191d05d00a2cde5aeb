@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/1547646888358" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1547646888358">
+  
+  <element name="SearchPVRequest">
+		<complexType>
+			<sequence>
+				<element name="AHV-Nummer" type="string"/>
+				<element name="Dokumenten-Art" type="string"/>
+				<element name="Geschaeftsfall" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="SearchPVReesponse">
+		<complexType>
+			<sequence>
+				<element name="AHV-Nummer" type="string"/>
+				<element name="Dokumenten-Art" type="string"/>
+				<element name="Geschaeftsfall" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+  
+</schema>

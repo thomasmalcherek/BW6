@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns="http://example.com/comigsbom" xmlns:tns1="http://example.com/comigsbom"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/comigsbom">
+  <xsd:annotation>
+    <xsd:documentation>BOMORIGIN::platform:/resource/com.igs.bom/Business%20Objects/comigsbom.bom#_JLd6XgUFEem-aMI85c3QiA</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType ecore:name="Geschftsfall" id="_JLd6XgUFEem-aMI85c3QiA" name="Geschftsfall">
+    <xsd:sequence>
+      <xsd:element ecore:name="PKID" id="_JLd6XwUFEem-aMI85c3QiA" maxOccurs="1" minOccurs="1"
+          name="PKID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="processNumber" id="_JLd6YgUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="1" name="processNumber" type="xsd:int"/>
+      <xsd:element ecore:name="urgent" id="_JLd6ZQUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="urgent" type="xsd:boolean"/>
+      <xsd:element ecore:name="processUser" id="_JLd6aAUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="processUser">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="workflowDate" id="_JLd6awUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="workflowDate" type="xsd:dateTime"/>
+      <xsd:element ecore:name="messagePK" id="_JLd6bgUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="messagePK">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="senderName" id="_JLd6cQUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="senderName">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="ownerName" id="_JLd6dAUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="ownerName">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="workflowState" id="_JLd6dwUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="workflowState">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="handlingReason" id="_JLd6egUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="handlingReason">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="feedback" id="_JLd6fQUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="feedback">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="typNummer" id="_JLd6gAUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="1" name="typNummer" type="xsd:int"/>
+      <xsd:element ecore:name="typBezeichnung" id="_JLd6gwUFEem-aMI85c3QiA" maxOccurs="1"
+          minOccurs="0" name="typBezeichnung">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

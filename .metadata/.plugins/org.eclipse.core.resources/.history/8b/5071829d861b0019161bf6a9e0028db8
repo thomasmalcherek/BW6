@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:jndi="http://www.tibco.com/namespaces/ws/2004/soap/apis/jndi" xmlns:ns0="http://example.com/comigsbom" xmlns:ns1="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:tns="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw/IVSachleistungenpruefenGeschaeftsfallStart" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="IVSachleistungenpruefenGeschaeftsfallStart" targetNamespace="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw/IVSachleistungenpruefenGeschaeftsfallStart" tibex:src="file:/C:/Users/admin/Downloads/startWorkflow.wsdl">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw">
+            <xs:import namespace="http://example.com/comigsbom"/>
+            <xs:simpleType name="string_50">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://example.com/comigsbom">
+            <xs:import namespace="http://www.tibco.com/bs3.0/_q_32sAHvEemexrh4L8sbdw"/>
+            <xs:annotation>
+                <xs:documentation>
+                    <ns0:DocumentationElement BOMORIGIN="/com.igs.bom/Business Objects/comigsbom.bom"/>
+                </xs:documentation>
+            </xs:annotation>
+            <xs:complexType name="Dokument">
+                <xs:sequence>
+                    <xs:element form="unqualified" name="dokumentID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="documentNumber" type="xs:int"/>
+                    <xs:element form="unqualified" name="documentType">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="22"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="documentSecurity" type="xs:int"/>
+                    <xs:element form="unqualified" minOccurs="0" name="documentDateOfReceipt" type="xs:dateTime"/>
+                    <xs:element form="unqualified" minOccurs="0" name="documentScanDate" type="xs:dateTime"/>
+                    <xs:element form="unqualified" minOccurs="0" name="stackName">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="effortType">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="keyword">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="kurztext">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="kommentar">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="anmeldenummer">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="formularempfnger">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Geschftsfall">
+                <xs:sequence>
+                    <xs:element form="unqualified" name="PKID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="processNumber" type="xs:int"/>
+                    <xs:element form="unqualified" minOccurs="0" name="urgent" type="xs:boolean"/>
+                    <xs:element form="unqualified" minOccurs="0" name="processUser">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="workflowDate" type="xs:dateTime"/>
+                    <xs:element form="unqualified" minOccurs="0" name="messagePK">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="senderName">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="ownerName">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="workflowState">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="handlingReason">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="feedback">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="typNummer" type="xs:int"/>
+                    <xs:element form="unqualified" minOccurs="0" name="typBezeichnung">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Mitglied">
+                <xs:sequence>
+                    <xs:element form="unqualified" name="MGPartnerID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="accountNumber">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="22"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="companyID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="22"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="name">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="additionalName">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="22"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="foundingDate">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="anmeldenummer">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="22"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Versicherter">
+                <xs:sequence>
+                    <xs:element form="unqualified" name="VSPartnerID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="secureNumber">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" name="personID">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="lastName">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="firstName">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="22"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="title">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="degree">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="gender">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="birthDate" type="xs:date"/>
+                    <xs:element form="unqualified" minOccurs="0" name="sprache">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="address">
+                <xs:sequence>
+                    <xs:element form="unqualified" minOccurs="0" name="street">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="postal">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="city">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element form="unqualified" minOccurs="0" name="canton">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="50"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="DokumentElement" type="ns0:Dokument"/>
+            <xs:element name="GeschftsfallElement" type="ns0:Geschftsfall"/>
+            <xs:element name="MitgliedElement" type="ns0:Mitglied"/>
+            <xs:element name="VersicherterElement" type="ns0:Versicherter"/>
+            <xs:element name="addressElement" type="ns0:address"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="IVSachleistungenpruefenGeschaeftsfallStart_StartIVSLGeschaeftsfall_INPUT">
+        <wsdl:part name="Dokument" type="ns0:Dokument"/>
+        <wsdl:part name="Geschaeftsfall" type="ns0:Geschftsfall"/>
+        <wsdl:part name="Mitglied" type="ns0:Mitglied"/>
+        <wsdl:part name="Versicherte" type="ns0:Versicherter"/>
+        <wsdl:part name="WorkflowID" type="ns1:string_50"/>
+    </wsdl:message>
+    <wsdl:portType xmlns:ns2="http://www.tibco.com/bs3.2/extensions" name="IVSachleistungenpruefenGeschaeftsfallStart" ns2:FlowContainer="_7tJOIBt-Eem5MsW2cdk9dA">
+        <wsdl:operation name="StartIVSLGeschaeftsfall">
+            <wsdl:input message="tns:IVSachleistungenpruefenGeschaeftsfallStart_StartIVSLGeschaeftsfall_INPUT" ns2:Event="_7y9iQht-Eem5MsW2cdk9dA"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="IVSachleistungenpruefenGeschaeftsfallStart_EP" type="tns:IVSachleistungenpruefenGeschaeftsfallStart">
+        <soap:binding style="rpc" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+        <jms:binding messageFormat="text"/>
+        <wsdl:operation name="StartIVSLGeschaeftsfall">
+            <wsdl:documentation/>
+            <soap:operation soapAction="StartIVSLGeschaeftsfall" style="rpc"/>
+            <wsdl:input>
+                <soap:body parts="Dokument Geschaeftsfall Mitglied Versicherte WorkflowID" use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IVSachleistungenpruefenGeschaeftsfallStart">
+        <wsdl:port binding="tns:IVSachleistungenpruefenGeschaeftsfallStart_EP" name="IVSachleistungenpruefenGeschaeftsfallStart_EP">
+            <soap:address location=""/>
+            <jndi:context>
+                <jndi:property name="java.naming.factory.initial" type="java.lang.String">com.tibco.tibjms.naming.TibjmsInitialContextFactory</jndi:property>
+                <jndi:property name="java.naming.provider.url" type="java.lang.String">tcp://ssva90322:8222</jndi:property>
+            </jndi:context>
+            <jms:connectionFactory>QueueConnectionFactory</jms:connectionFactory>
+            <!--The element targetAddress value (com.tibco.poc.test.bw.startworkflow) is the jndi name of the destination. Please replace this with physical destination name at the service consumption point.-->
+            <jms:targetAddress destination="queue">com.tibco.poc.test.bw.startworkflow</jms:targetAddress>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

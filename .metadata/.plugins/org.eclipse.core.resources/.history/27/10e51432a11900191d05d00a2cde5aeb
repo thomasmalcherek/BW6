@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://com.tibco.poc.test.bw.pv.getPVData"
+	xmlns:tns="http://com.tibco.poc.test.bw.pv.getPVData" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProcessService"
+	targetNamespace="http://com.tibco.poc.test.bw.pv.getPVData">
+	<wsdl:import location="../Schemas/PVService.xsd"
+		namespace="http://com.tibco.poc.test.bw.pv.PVServiceXSD" />
+	<wsdl:message name="GetDataFromPVRequest">
+		<wsdl:part element="extns:operationRequest" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="GetDataFromPVReesponse">
+		<wsdl:part element="extns:operationResponse" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="operationFault">
+		<wsdl:part element="extns:operationFault" name="parameters" />
+	</wsdl:message>
+	<wsdl:portType name="Service">
+		<wsdl:operation name="operation">
+			<wsdl:input message="tns:operationRequest" name="operationInput" />
+			<wsdl:output message="tns:operationResponse" name="operationOutput" />
+			<wsdl:fault message="tns:operationFault" name="Fault" />
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>
