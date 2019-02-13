@@ -13,7 +13,7 @@
 //StartWorkflow/Processes/startworkflow/StartWF.bwp.library.expansionstate=0
 //StartWorkflow/Processes/startworkflow/StartWF.bwp.recent.expansionstate=1
 //StartWorkflow/Processes/startworkflow/startWFByIteration.bwp.displayer.openstate=0
-//StartWorkflow/Processes/startworkflow/startWFByIteration.bwp.displayer.targetpalette=com.tibco.bw.palette.jdbc.design
+//StartWorkflow/Processes/startworkflow/startWFByIteration.bwp.displayer.targetpalette=com.tibco.bw.palette.java.design
 //StartWorkflow/Processes/startworkflow/startWFByIteration.bwp.favorite.expansionstate=1
 //StartWorkflow/Processes/startworkflow/startWFByIteration.bwp.library.expansionstate=0
 //StartWorkflow/Processes/startworkflow/startWFByIteration.bwp.recent.expansionstate=1
