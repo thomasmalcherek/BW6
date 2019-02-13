@@ -200,7 +200,7 @@
                 <complexType>
                     <sequence>
                         <element maxOccurs="1" minOccurs="1"
-                            name="IN_AHV_NUMMER" nillable="true" type="string"/>
+                            name="IN_VERSICHNR" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
                             name="IN_DOKUMENTENART" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="1"
@@ -225,9 +225,9 @@
                             <complexType>
                                 <sequence>
                                     <element maxOccurs="1" minOccurs="1"
-                                    name="WF_CASE_ID" type="string"/>
+                                    name="BP_ID" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
-                                    name="AHV_NUMMER"
+                                    name="VERSICHNR"
                                     nillable="false" type="string"/>
                                     <element maxOccurs="1" minOccurs="0"
                                     name="DOKUMENTENART"
@@ -243,8 +243,10 @@
                                     name="ANZAHL_DOKUMENTE"
                                     nillable="false" type="int"/>
                                     <element maxOccurs="1" minOccurs="0"
-                                    name="DOSSIERID"
+                                    name="PARTNERID"
                                     nillable="false" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="GESCHAEFTSFALLNR" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -688,7 +690,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery_Like&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns2:SearchDataResponses>&lt;xsl:for-each select=&quot;$JDBCQuery_Like/Record&quot;>&lt;SearchDataResponse>&lt;CaseID>&lt;xsl:value-of select=&quot;WF_CASE_ID&quot;/>&lt;/CaseID>&lt;AHV-Nummer>&lt;xsl:value-of select=&quot;AHV_NUMMER&quot;/>&lt;/AHV-Nummer>&lt;Dokumenten-Art>&lt;xsl:value-of select=&quot;DOKUMENTENART&quot;/>&lt;/Dokumenten-Art>&lt;DossierID>&lt;xsl:value-of select=&quot;DOSSIERID&quot;/>&lt;/DossierID>&lt;Geschaeftsfall>&lt;xsl:value-of select=&quot;GESCHAEFTSFALL&quot;/>&lt;/Geschaeftsfall>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space(xsd:string(ANZAHL_DOKUMENTE)))&amp;lt;1&quot;>&lt;Anzahl_der_Dokumente>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/Anzahl_der_Dokumente>&lt;/xsl:when>&lt;xsl:otherwise>&lt;Anzahl_der_Dokumente>&lt;xsl:value-of select=&quot;ANZAHL_DOKUMENTE&quot;/>&lt;/Anzahl_der_Dokumente>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/SearchDataResponse>&lt;/xsl:for-each>&lt;/tns2:SearchDataResponses>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery_Like&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns2:SearchDataResponses>&lt;xsl:for-each select=&quot;$JDBCQuery_Like/Record&quot;>&lt;SearchDataResponse>&lt;GeschaeftsfallNr>&lt;xsl:value-of select=&quot;GESCHAEFTSFALLNR&quot;/>&lt;/GeschaeftsfallNr>&lt;Versich.-Nr>&lt;xsl:value-of select=&quot;VERSICHNR&quot;/>&lt;/Versich.-Nr>&lt;Dokumenten-Art>&lt;xsl:value-of select=&quot;DOKUMENTENART&quot;/>&lt;/Dokumenten-Art>&lt;PartnerID>&lt;xsl:value-of select=&quot;PARTNERID&quot;/>&lt;/PartnerID>&lt;Geschaeftsfall>&lt;xsl:value-of select=&quot;GESCHAEFTSFALL&quot;/>&lt;/Geschaeftsfall>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space(xsd:string(ANZAHL_DOKUMENTE)))&amp;lt;1&quot;>&lt;Anzahl_der_Dokumente>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/Anzahl_der_Dokumente>&lt;/xsl:when>&lt;xsl:otherwise>&lt;Anzahl_der_Dokumente>&lt;xsl:value-of select=&quot;ANZAHL_DOKUMENTE&quot;/>&lt;/Anzahl_der_Dokumente>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/SearchDataResponse>&lt;/xsl:for-each>&lt;/tns2:SearchDataResponses>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -754,7 +756,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3bce467d-82dd-46e5-9005-894d39e8f58c+input&quot; xmlns:tns2=&quot;http://com.tibco.poc.test.bw.saveDataCaseXSD&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCQuery_Like-input&quot; match=&quot;/&quot;>&lt;tns7:jdbcQueryActivityInput>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space($Start/AHV-Nummer))>0&quot;>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;concat('%',$Start/AHV-Nummer,'%')&quot;/>&lt;/IN_AHV_NUMMER>&lt;/xsl:when>&lt;xsl:otherwise>&lt;IN_AHV_NUMMER>&lt;xsl:value-of select=&quot;normalize-space($Start/AHV-Nummer)&quot;/>&lt;/IN_AHV_NUMMER>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space($Start/Dokumenten-Art))>0&quot;>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;concat('%',$Start/Dokumenten-Art,'%')&quot;/>&lt;/IN_DOKUMENTENART>&lt;/xsl:when>&lt;xsl:otherwise>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;normalize-space($Start/Dokumenten-Art)&quot;/>&lt;/IN_DOKUMENTENART>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space($Start/Geschaeftsfall))>0&quot;>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;concat('%',$Start/Geschaeftsfall,'%')&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;/xsl:when>&lt;xsl:otherwise>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;normalize-space($Start/Geschaeftsfall)&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns7:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+3bce467d-82dd-46e5-9005-894d39e8f58c+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JDBCQuery_Like-input&quot; match=&quot;/&quot;>&lt;tns7:jdbcQueryActivityInput>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space($Start/VersichNr))>0&quot;>&lt;IN_VERSICHNR>&lt;xsl:value-of select=&quot;concat('%',$Start/VersichNr,'%')&quot;/>&lt;/IN_VERSICHNR>&lt;/xsl:when>&lt;xsl:otherwise>&lt;IN_VERSICHNR>&lt;xsl:value-of select=&quot;normalize-space($Start/VersichNr)&quot;/>&lt;/IN_VERSICHNR>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space($Start/Dokumenten-Art))>0&quot;>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;concat('%',$Start/Dokumenten-Art,'%')&quot;/>&lt;/IN_DOKUMENTENART>&lt;/xsl:when>&lt;xsl:otherwise>&lt;IN_DOKUMENTENART>&lt;xsl:value-of select=&quot;normalize-space($Start/Dokumenten-Art)&quot;/>&lt;/IN_DOKUMENTENART>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(normalize-space($Start/Geschaeftsfall))>0&quot;>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;concat('%',$Start/Geschaeftsfall,'%')&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;/xsl:when>&lt;xsl:otherwise>&lt;IN_GESCHAEFTSFALL>&lt;xsl:value-of select=&quot;normalize-space($Start/Geschaeftsfall)&quot;/>&lt;/IN_GESCHAEFTSFALL>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns7:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -767,11 +769,11 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="1000"
                                     sharedResourceProperty="jdbcProperty3"
-                                    sqlStatement="SELECT  * FROM WFDATA_DBA.WFDATA_BPM Where AHV_NUMMER like ? OR DOKUMENTENART like ? OR GESCHAEFTSFALL like ?&#xa;"
+                                    sqlStatement="SELECT  * FROM WFDATA_DBA.WFDATA_BPM Where VERSICHNR like ? OR DOKUMENTENART like ? OR GESCHAEFTSFALL like ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters
                                     DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_AHV_NUMMER"/>
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="IN_VERSICHNR"/>
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="IN_DOKUMENTENART"/>
@@ -779,10 +781,10 @@
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="IN_GESCHAEFTSFALL"/>
                                     <columnMetadata
-                                    columnName="WF_CASE_ID"
+                                    columnName="BP_ID"
                                     dataType="12" typeName="VARCHAR"/>
                                     <columnMetadata
-                                    columnName="AHV_NUMMER"
+                                    columnName="VERSICHNR"
                                     dataType="12"
                                     status="OptionalElement" typeName="VARCHAR"/>
                                     <columnMetadata
@@ -804,9 +806,12 @@
                                     dataType="4"
                                     status="OptionalElement" typeName="INTEGER"/>
                                     <columnMetadata
-                                    columnName="DOSSIERID"
+                                    columnName="PARTNERID"
                                     dataType="12"
                                     status="OptionalElement" typeName="VARCHAR"/>
+                                    <columnMetadata
+                                    columnName="GESCHAEFTSFALLNR"
+                                    dataType="12" typeName="VARCHAR"/>
                                     </value>
                                 </properties>
                             </activityConfig>

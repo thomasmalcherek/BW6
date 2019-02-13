@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;JDBCConnectionResource.jdbcResource&apos; to &apos;startWorkflow&apos;" description="Move &apos;JDBCConnectionResource.jdbcResource&apos; to &apos;startWorkflow&apos;" destination="Resources/startWorkflow" element1="Resources/JDBCConnectionResource.jdbcResource" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1549884461784" updateReferences="true"/>
+</session>

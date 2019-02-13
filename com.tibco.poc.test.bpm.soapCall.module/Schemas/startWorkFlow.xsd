@@ -3,155 +3,41 @@
 
 	<complexType name="Dokument">
 		<sequence>
-			<element form="unqualified" name="dokumentID">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" name="dokumentID" type="tns:string_50" />
 			<element form="unqualified" name="documentNumber" type="int"/>
-			<element form="unqualified" name="documentType">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="22"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" name="documentType" type="tns:string_50" />
 			<element form="unqualified" minOccurs="0" name="documentSecurity" type="int"/>
 			<element form="unqualified" minOccurs="0" name="documentDateOfReceipt" type="dateTime"/>
 			<element form="unqualified" minOccurs="0" name="documentScanDate" type="dateTime"/>
-			<element form="unqualified" minOccurs="0" name="stackName">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="effortType">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="keyword">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="kurztext">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="kommentar">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="anmeldenummer">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="formularempfnger">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="stackName" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="effortType" type="tns:string_50" />
+			<element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="keyword" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="kurztext" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="kommentar" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="anmeldenummer" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="formularempfnger" type="tns:string_50" />
 		</sequence>
 	</complexType>
 	<complexType name="Geschaeftsfall">
 		<sequence>
-			<element form="unqualified" name="PKID">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" name="processNumber" type="int"/>
+			<element form="unqualified" name="PKID" type="tns:string_50" />
+			<element form="unqualified" name="processNumber" type="string"/>
 			<element form="unqualified" minOccurs="0" name="urgent" type="boolean"/>
-			<element form="unqualified" minOccurs="0" name="processUser">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="processUser" type="tns:string_50" />
 			<element form="unqualified" minOccurs="0" name="workflowDate" type="dateTime"/>
-			<element form="unqualified" minOccurs="0" name="messagePK">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="senderName">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="ownerName">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="workflowState">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="handlingReason">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="feedback">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="messagePK" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="senderName" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="ownerName" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="workflowState" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="handlingReason" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="feedback" type="tns:string_50" />
 			<element form="unqualified" name="typNummer" type="int"/>
-			<element form="unqualified" minOccurs="0" name="typBezeichnung">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="typBezeichnung" type="tns:string_50" />
 		</sequence>
 	</complexType>
 	<complexType name="Mitglied">
 		<sequence>
-			<element form="unqualified" name="MGPartnerID">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" name="MGPartnerID" type="tns:string_50" />
 			<element form="unqualified" name="accountNumber">
 				<simpleType>
 					<restriction base="string">
@@ -166,13 +52,7 @@
 					</restriction>
 				</simpleType>
 			</element>
-			<element form="unqualified" minOccurs="0" name="name">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="name" type="tns:string_50" />
 			<element form="unqualified" minOccurs="0" name="additionalName">
 				<simpleType>
 					<restriction base="string">
@@ -180,13 +60,7 @@
 					</restriction>
 				</simpleType>
 			</element>
-			<element form="unqualified" minOccurs="0" name="foundingDate">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="foundingDate" type="tns:string_50" />
 			<element form="unqualified" minOccurs="0" name="anmeldenummer">
 				<simpleType>
 					<restriction base="string">
@@ -198,70 +72,16 @@
 	</complexType>
 	<complexType name="Versicherter">
 		<sequence>
-			<element form="unqualified" name="VSPartnerID">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" name="secureNumber">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" name="personID">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="lastName">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="firstName">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="22"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="title">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="degree">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
-			<element form="unqualified" minOccurs="0" name="gender">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" name="VSPartnerID" type="tns:string_50" />
+			<element form="unqualified" name="secureNumber" type="tns:string_50" />
+			<element form="unqualified" name="personID" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="lastName" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="firstName" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="title" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="degree" type="tns:string_50" />
+			<element form="unqualified" minOccurs="0" name="gender" type="tns:string_50" />
 			<element form="unqualified" minOccurs="0" name="birthDate" type="date"/>
-			<element form="unqualified" minOccurs="0" name="sprache">
-				<simpleType>
-					<restriction base="string">
-						<maxLength value="50"/>
-					</restriction>
-				</simpleType>
-			</element>
+			<element form="unqualified" minOccurs="0" name="sprache" type="tns:string_50" />
 		</sequence>
 	</complexType>
 	
@@ -288,7 +108,9 @@
 	<element name="StartWorkFlowResponse">
 		<complexType>
 			<sequence>
-				<element maxOccurs="1" minOccurs="1" name="ProcessID" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="BusinessProcessID" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="GeschaefstfallName" type="string"/>
+				<element maxOccurs="1" minOccurs="1" name="WFCaseID" type="string"/>
 			</sequence>
 		</complexType>
 	</element>

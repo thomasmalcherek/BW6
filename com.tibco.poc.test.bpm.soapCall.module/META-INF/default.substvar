@@ -90,6 +90,22 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>/JMS_BPM_BW6/com.tibco.poc.test.bw.startWF</name>
+			<value>com.tibco.poc.test.bw.startWF</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/JMS_BPM_BW6/getSubcriptionFromICN</name>
+			<value>com.tibco.poc.test.icn.subcription</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>/DB2_WFDATA_BPM/User</name>
 			<value>WFDATA_DBA</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -115,7 +131,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/HTTP_BW6/Host</name>
-			<value>ssva90323</value>
+			<value>localhost</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -127,6 +143,14 @@
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/FILE/Folder</name>
+			<value>c:\temp\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
 			<isOverride>false</isOverride>
 		</globalVariable>
 	</globalVariables>

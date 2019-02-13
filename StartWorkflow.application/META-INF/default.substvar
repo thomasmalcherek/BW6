@@ -81,5 +81,53 @@
 			<type>String</type>
 			<isOverride>false</isOverride>
 		</globalVariable>
+		<globalVariable>
+			<name>//StartWorkflow///FILE/Folder_File</name>
+			<value>c:\temp\*.xml</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//StartWorkflow///AMX_BPM/User</name>
+			<value>tibco-admin</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//StartWorkflow///AMX_BPM/Password</name>
+			<value>#!Ious1Na2z4O/vBMRcQjKknyJEThjRnvH</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/DB2_WFDATA_BPM/User</name>
+			<value>WFDATA_DBA</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/DB2_WFDATA_BPM/Password</name>
+			<value>#!/hELfsPxyTWYu5o9/jRMfu62givkEnBJRc6WXeqFksjKwp0oK/P45CMJu8XZJmSYa9n9O9w496s=</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Password</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>/DB2_WFDATA_BPM/DB_URL</name>
+			<value>jdbc:tibcosoftwareinc:db2://ssva90324:50000;DatabaseName=ECM_WFMS</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
 	</globalVariables>
 </repository>

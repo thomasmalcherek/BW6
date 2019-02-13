@@ -180,11 +180,14 @@
   <sca:property xmi:id="_ddHGYOmzEeiG6re6qGmOwQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_2tqdQOm2EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/NamingProviderUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_J9l10Om3EeiG6re6qGmOwQ" name="/JMS_BPM_BW6/com.tibco.poc.test.bw.savedata" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Zf-REB1pEemXR6kbD_M6zQ" name="/JMS_BPM_BW6/com.tibco.poc.test.bw.startWF" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_xd6YgC3eEemjZqRdEpTPcQ" name="/JMS_BPM_BW6/getSubcriptionFromICN" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_ol1Z8Oy2EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/User" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_u902wOy2EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/Password" type="property:password" scaext:simpleValue="#!Je6Xs35U3MTX7FDoQcHV9w==" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_YHVKsOy3EeiTX6Ak6OFGUA" name="/DB2_WFDATA_BPM/DB_URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_sqXNABlxEemugKVX_ngkhA" name="/HTTP_BW6/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_yMWO4BlxEemugKVX_ngkhA" name="/HTTP_BW6/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hyb0gB1_EemXR6kbD_M6zQ" name="/FILE/Folder" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_MpvmEBQUEem1wobiEBjdwg" name="ComponentsaveDataCase" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_MpvmERQUEem1wobiEBjdwg" processName="com.tibco.poc.test.bpm.soapcall.module.saveDataCase_JMS"/>
     <sca:service xmi:id="_MqChABQUEem1wobiEBjdwg" name="saveDataCase">
@@ -203,7 +206,7 @@
       <sca:interface.wsdl xmi:id="_7B3rAxmmEemTqrxdvWv9zg" interface="http://com.tibco.poc.test.bw.pv.getPVData#wsdl.interface(GetAddtionalData)" scaext:wsdlLocation="../Service%20Descriptors/ProcessService.wsdl"/>
     </sca:service>
   </sca:component>
-  <sca:component xmi:id="_lyMKABuPEem0Y_LYym2KiQ" name="ComponentStartIVSLWorkflow" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lyMKARuPEem0Y_LYym2KiQ" processName="com.tibco.poc.test.bpm.subprocesses.module.StartIVSLWorkflow"/>
+  <sca:component xmi:id="_hFnNYCu6EemgQf7J4oQOkQ" name="ComponentgetSubscriptionFromICN" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_hFnNYSu6EemgQf7J4oQOkQ" processName="com.tibco.poc.test.bpm.subprocesses.module.getSubscriptionFromICN"/>
   </sca:component>
 </sca:composite>

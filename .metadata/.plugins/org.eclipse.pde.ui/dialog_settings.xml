@@ -15,4 +15,7 @@
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
+	<section name="TracingTab">
+		<item value="org.eclipse.osgi" key="selectedPlugin"/>
+	</section>
 </section>

@@ -1,4 +1,4 @@
-description.buildorder=com.tibco.poc.test.bpm.soapCall.module/com.tibco.poc.test.bpm.soapCall
+description.buildorder=StartWorkflow/StartWorkflow.application/com.tibco.poc.test.bpm.soapCall.module/com.tibco.poc.test.bpm.soapCall
 description.defaultbuildorder=false
 eclipse.preferences.version=1
 version=1

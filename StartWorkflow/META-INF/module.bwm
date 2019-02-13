@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_BJWXIBuKEem0Y_LYym2KiQ" targetNamespace="http://tns.tibco.com/bw/composite/StartWorkflow" name="StartWorkflow" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_BJWXIBuKEem0Y_LYym2KiQ" targetNamespace="http://tns.tibco.com/bw/composite/StartWorkflow" name="StartWorkflow" compositeext:version="1.0.0" compositeext:formatVersion="2">
   <sca:property xmi:id="_BZAjwBuKEem0Y_LYym2KiQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_BZJGoBuKEem0Y_LYym2KiQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_BZJGoRuKEem0Y_LYym2KiQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -10,10 +10,16 @@
   <sca:property xmi:id="_BZS3oxuKEem0Y_LYym2KiQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_BZS3pBuKEem0Y_LYym2KiQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_1ligQBuKEem0Y_LYym2KiQ" name="/JMS_BPM_BW6/NamingProviderUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__lhp0B1_EemXR6kbD_M6zQ" name="/FILE/Folder_File" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_nId44B3eEem4GaWZCHVozQ" name="/AMX_BPM/User" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uBsagB3eEem4GaWZCHVozQ" name="/AMX_BPM/Password" type="property:password" scaext:simpleValue="#!m6DcNdh7CcClZNgmWJ/B0A==" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_GeJRkBuKEem0Y_LYym2KiQ" name="ComponentStartIVSLWorkflow" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_GeJRkRuKEem0Y_LYym2KiQ" processName="startworkflow.StartIVSLWorkflow"/>
   </sca:component>
   <sca:component xmi:id="_GrtMcBuKEem0Y_LYym2KiQ" name="ComponentStartWF" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_GrtMcRuKEem0Y_LYym2KiQ" processName="startworkflow.StartWF"/>
+  </sca:component>
+  <sca:component xmi:id="_w7GMEC3uEemjZqRdEpTPcQ" name="ComponentstartWFByIteration" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_w7GMES3uEemjZqRdEpTPcQ" processName="startworkflow.startWFByIteration"/>
   </sca:component>
 </sca:composite>

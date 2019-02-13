@@ -1,0 +1,3 @@
+1548067566453	Rename Module Configuration Property from '/JMS_BPM_BW6/com.tibco.poc.test.bw.saveWF' to 'com.tibco.poc.test.bw.startWF'
+1548076960415	Delete Module Configuration Property 'newProperty'
+1548078259172	Delete Module Configuration Property '/FILE/File'

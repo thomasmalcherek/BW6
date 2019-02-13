@@ -7,7 +7,8 @@
 		<complexType>
 			<sequence>
 				<element name="dokument" type="tns:dokument" />
-				<element maxOccurs="1" minOccurs="0" name="geschaeftsfall" type="tns:geschaeftsfall" />
+				<element maxOccurs="1" minOccurs="0" name="geschaeftsfall"
+					type="tns:geschaeftsfall" />
 				<element maxOccurs="1" minOccurs="0" name="mitglied" type="tns:mitglied" />
 				<element maxOccurs="1" minOccurs="0" name="versicherter"
 					type="tns:versicherter" />
@@ -102,7 +103,7 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element maxOccurs="1" minOccurs="1"
+			<xsd:element maxOccurs="1" minOccurs="0"
 				name="Versicherungsnummer">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
@@ -110,7 +111,7 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element maxOccurs="1" minOccurs="1" name="PersonenID">
+			<xsd:element maxOccurs="1" minOccurs="0" name="PersonenID">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="50" />
@@ -166,7 +167,7 @@
 
 	<xsd:complexType name="geschaeftsfall">
 		<xsd:sequence>
-			<xsd:element maxOccurs="1" minOccurs="1" name="PKID">
+			<xsd:element maxOccurs="1" minOccurs="0" name="PKID">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:maxLength value="50" />
@@ -174,7 +175,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element maxOccurs="1" minOccurs="1"
-				name="GeschaeftsfallNummer" type="xsd:int" />
+				name="GeschaeftsfallNummer" type="xsd:string" />
 			<xsd:element maxOccurs="1" minOccurs="0" name="Dringend"
 				type="xsd:boolean" />
 			<xsd:element maxOccurs="1" minOccurs="0" name="Bearbeiter">
@@ -298,7 +299,11 @@
 	<element name="CreateCaseIDResponse">
 		<complexType>
 			<sequence>
-				<element maxOccurs="1" minOccurs="1" name="CaseID" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="BusinessProcessID"
+					type="string" />
+				<element maxOccurs="1" minOccurs="0" name="GeschaefstfallName"
+					type="string" />
+				<element maxOccurs="1" minOccurs="0" name="WFCaseID" type="string" />
 			</sequence>
 		</complexType>
 	</element>
@@ -316,11 +321,11 @@
 			<sequence>
 				<element maxOccurs="1" minOccurs="1" name="GESCHAEFTSFALL"
 					type="string" />
-					<element maxOccurs="1" minOccurs="1" name="DOKUMENTENART"
+				<element maxOccurs="1" minOccurs="1" name="DOKUMENTENART"
 					type="string" />
-					<element maxOccurs="1" minOccurs="1" name="DOKUMENTENART_MAIN"
+				<element maxOccurs="1" minOccurs="1" name="DOKUMENTENART_MAIN"
 					type="string" />
-					<element maxOccurs="1" minOccurs="1" name="DOKUMENTENART_SPEC"
+				<element maxOccurs="1" minOccurs="1" name="DOKUMENTENART_SPEC"
 					type="string" />
 			</sequence>
 		</complexType>
@@ -372,12 +377,12 @@
 				<element name="SearchDataResponse">
 					<complexType>
 						<sequence>
-							<element name="CaseID" type="string" />
-							<element name="AHV-Nummer" type="string" />
-							<element name="Dokumenten-Art" type="string" />
-							<element name="DossierID" type="string" />
-							<element name="Geschaeftsfall" type="string" />
-							<element name="Anzahl_der_Dokumente" type="integer" />
+							<xsd:element name="GeschaeftsfallNr" type="xsd:string" />
+							<xsd:element name="Versich.-Nr" type="xsd:string" />
+							<xsd:element name="Dokumenten-Art" type="xsd:string" />
+							<xsd:element name="PartnerID" type="xsd:string" />
+							<xsd:element name="Geschaeftsfall" type="xsd:string" />
+							<xsd:element name="Anzahl_der_Dokumente" type="xsd:integer" />
 						</sequence>
 					</complexType>
 				</element>
@@ -388,7 +393,7 @@
 	<element name="SearchDataRequest">
 		<complexType>
 			<sequence>
-				<element name="AHV-Nummer" type="string" />
+				<element name="VersichNr" type="string" />
 				<element name="Dokumenten-Art" type="string" />
 				<element name="Geschaeftsfall" type="string" />
 			</sequence>

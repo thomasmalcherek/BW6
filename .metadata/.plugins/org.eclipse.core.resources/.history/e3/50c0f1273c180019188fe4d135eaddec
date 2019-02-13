@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sp="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/securityprovider" xmlns:wss="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/auth/wss" xmi:id="_Gj3ogRg8EemlEalXRKl32Q" name="com.tibco.poc.test.bpm.soapcall.module.WSSAuthenticationResource" type="wss:WSSConfiguration">
-  <jndi:configuration xsi:type="sp:AuthenticationSecurityProvider" xmi:id="_GknPYBg8EemlEalXRKl32Q">
-    <configuration xsi:type="wss:WSSConfiguration" xmi:id="_GknPYRg8EemlEalXRKl32Q"/>
-  </jndi:configuration>
-</jndi:namedResource>

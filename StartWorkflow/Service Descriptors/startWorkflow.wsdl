@@ -29,7 +29,7 @@
                     <xs:element name="documentType" form="unqualified">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="22"/>
+                                <xs:maxLength value="50"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -96,7 +96,7 @@
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="processNumber" form="unqualified" type="xs:int"/>
+                    <xs:element name="processNumber" form="unqualified" type="xs:string"/>
                     <xs:element name="urgent" form="unqualified" type="xs:boolean" minOccurs="0"/>
                     <xs:element name="processUser" form="unqualified" minOccurs="0">
                         <xs:simpleType>
@@ -195,13 +195,7 @@
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="foundingDate" form="unqualified" minOccurs="0">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="50"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
+                    <xs:element name="foundingDate" form="unqualified" type="xs:date" minOccurs="0"/>
                     <xs:element name="anmeldenummer" form="unqualified" minOccurs="0">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">

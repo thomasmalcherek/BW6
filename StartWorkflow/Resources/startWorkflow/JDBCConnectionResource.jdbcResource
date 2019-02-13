@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_i7ftUey2EeiTX6Ak6OFGUA" name="startWorkflow.JDBCConnectionResource" type="jdbc:JdbcDataSource">
+  <jndi:reference xmi:id="_i8dWoOy2EeiTX6Ak6OFGUA" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_i8dWoey2EeiTX6Ak6OFGUA" maxConnections="100">
+    <substitutionBindings xmi:id="_iHOiUOy3EeiTX6Ak6OFGUA" template="username" propName="/DB2_WFDATA_BPM/User"/>
+    <substitutionBindings xmi:id="_kNENcOy3EeiTX6Ak6OFGUA" template="password" propName="/DB2_WFDATA_BPM/Password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_i8fy4Oy2EeiTX6Ak6OFGUA" jdbcDriver="tibcosoftwareinc.jdbc.db2.DB2Driver">
+      <substitutionBindings xmi:id="_g3vQYOy3EeiTX6Ak6OFGUA" template="dbURL" propName="/DB2_WFDATA_BPM/DB_URL"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>

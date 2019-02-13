@@ -452,7 +452,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="290"
+                                    x="395"
                                     xsi:type="notation:Bounds" y="40"/>
                                     </children>
 
@@ -514,7 +514,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="61"
+                                    x="162"
                                     xsi:type="notation:Bounds" y="40"/>
                                     </children>
 
@@ -541,7 +541,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="165"
+                                    height="168"
                                     width="695" xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -2517,6 +2517,11 @@
             name="workPerformer-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns2:WorkPerformerResponse"
             name="workPerformer" sca-bpel:internal="true"/>
+        <bpws:variable name="Counter_per_day" type="xsd:integer">
+            <bpws:from>
+                <bpws:literal>1</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>

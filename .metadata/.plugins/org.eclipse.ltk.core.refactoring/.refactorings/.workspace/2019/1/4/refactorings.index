@@ -1,0 +1,4 @@
+1548067611325	Delete resource 'com.tibco.poc.test.bpm.soapCall.module/Resources/com/tibco/poc/test/bpm/soapcall/module/IdentityProvider_BPM.userIdResource'
+1548067617622	Delete resource 'com.tibco.poc.test.bpm.soapCall.module/Policies/com/tibco/poc/test/WssConsumer.policy'
+1548068175376	Delete resource 'com.tibco.poc.test.bpm.soapCall.module/Service Descriptors/startWorkflow.wsdl'
+1548069404216	Delete resource 'com.tibco.poc.test.bpm.soapCall.module/Resources/com/tibco/poc/test/bpm/soapcall/module/JMSConnectionResource_Neu.jmsConnResource'
